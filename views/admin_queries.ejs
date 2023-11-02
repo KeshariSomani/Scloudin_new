@@ -1,0 +1,30 @@
+<%-include('partials/adminNavbar')%>
+
+<div class="w-full ">
+    <p class="text-3xl text-center my-10"> <%=queries[0].page_name%></p>
+     <table class="min-w-full bg-white shadow-md rounded">
+       <thead>
+           <tr class="bg-yellow-600">
+             <th class="text-left py-3 px-4">S.No.</th>
+               <th class="text-left py-3 px-4">Name</th>
+               <th class="text-left py-3 px-4">Email</th>
+               <th class="text-left py-3 px-4">Company</th>
+               <th class="text-left py-3 px-4">Subject</th>
+               <th class="text-left py-3 px-4">Message</th>  
+           </tr>
+       </thead>
+       <tbody>
+           <% for (let i = 0; i < queries.length; i++) { %>
+               <tr class="<%= i % 2 === 0 ? 'bg-gray-100' : '' %>">
+                  <td class="py-2 px-4"><%= i %></td>
+                   <td class="py-2 px-4"><%= queries[i].name %></td>
+                   <td class="py-2 px-4"><%= queries[i].email %></td>
+                   <td class="py-2 px-4"><%= queries[i].company %></td>
+                   <td class="py-2 px-4"><%= queries[i].subject %></td>
+                   <td class="py-2 px-4"><%= queries[i].message %></td>
+               </tr>
+           <% } %>
+       </tbody>
+   </table>
+
+</div>

@@ -1,0 +1,36 @@
+<%-include('partials/header')%>
+
+<img src="../public/images/About_section1.svg" alt="main" class="w-full" />
+<div class="flex felx-col justify-center mt-16">
+  <div class="w-[596px]">
+    <p
+      class="headerFont font-extrabold text-7xl text-center text-[#0B1C98]"
+    >
+      News & Articles
+    </p>
+    <p
+      class="headerFont text-2xl text-[#797979] text-center mt-4 tracking-wide"
+    >
+      Lorem ipsum dolor sit amet consectetur adipiscing elit interdum
+      ullamcorper sed pharetra sene.
+    </p>
+  </div>
+</div>
+
+<section>
+  <div class="flex flex-wrap p-5 space-x-5">
+    <% blogs_data.forEach(element => { %>
+      
+         <div class="bg-gray-200  w-[30%] p-5 rounded-lg">
+            <img src="../public/blogImages/<%=element.blog_image_url%>" class="w-96 h-72 rounded-lg">
+            <p class="text-2xl font-bold"><%=element.blog_title%></p>
+            <p><%=element.blog_short_description%></p>
+            <a href="/your_blog?id=<%=element._id%>" class="text-blue-500 underline">
+            <p>Read More</p>
+            </a>
+         </div> 
+        </a>             
+    <%}) %>
+</div>
+</section>
+<%-include('partials/footer')%>

@@ -1,0 +1,101 @@
+
+<!--Section 21-->
+<div class="mt-8 md:text-left flex justify-center mb-8 lg:mt-12 sm:mt-0 ">
+    <div class="h-auto w-full space-y-5 lg:mx-12 mb-4 bg-white border  pt-4 mx-4 rounded-2xl shadow px-4 " >
+      <form  method="post" id="myForm" action="/submit_contact_form">
+        <div class="lg:flex flex-row justify-between">
+          <div>
+            <label for="name" class="block mb-2 mt-8 text-[#000000] text-xl  font-bold"
+              >Full Name <b class="">*</b></label
+            >
+            <input
+              type="name"
+              name="name" 
+              placeholder="john david"
+              class=" text-black text-sm border border-[#D3D3D3] rounded-md block w-full lg:w-[35rem] p-2.5"
+              required
+            />
+          </div>
+    
+          <div >
+              <label for="name" class="block mb-2 mt-8 text-[#000000] text-xl  font-bold"
+                > Your Email <b class="">*</b></label
+              >
+              <input
+                type="email"
+                name="email" placeholder="example@yourmail.com"
+                class=" text-black text-sm border border-[#D3D3D3] rounded-md block w-full lg:w-[35rem] p-2.5"
+                required
+              />
+            </div>
+          </div>
+          
+          <div class="lg:flex flex-row justify-between">
+            <div>
+              <label for="name" class="block mb-2 mt-8 text-[#000000] text-xl  font-bold"
+                >Company <b class="">*</b></label
+              >
+              <input
+                type="name"
+                name="company" placeholder="yourcompany name here"
+                class=" text-black text-sm border border-[#D3D3D3] rounded-md block w-full lg:w-[35rem] p-2.5"
+                required
+              />
+            </div>
+    
+            <div >
+                <label for="name" class="block mb-2 mt-8 text-[#000000] text-xl  font-bold"
+                  >Subject <b class="">*</b></label
+                >
+                <input
+                  type="text"
+                  name="subject" placeholder="how can we help"
+                  class=" text-black text-sm border border-[#D3D3D3] rounded-md block w-full lg:w-[35rem] p-2.5"
+                  required
+                />
+              </div>
+            </div>
+         
+            <div>
+              <label for="email" class="block mb-2 mt-8 text-[#000000] text-xl  font-bold"
+                >Message <b>*</b></label >
+             <input name="message"  class="h-36 text-black text-sm border border-[#D3D3D3] shadow-lg rounded-md block w-full p-2.5" placeholder="hello there,i would like to talk about how to...">
+            
+            </div>
+             <div class="mt-4 flex justify-center">
+                  <button class="bg-[#242331] text-white text-2xl font-semibold px-12 py-4  rounded-full mt-8 mb-[-1.5rem]" id="myButton">Send Message</button>
+              </div>
+          
+        </form>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      $(document).ready(function()
+      {
+          $('#myForm').submit(function (event) {
+              event.preventDefault(); // Prevent the default form submission
+              // Serialize the form data
+              const formData = $(this).serialize();
+  
+              // Send an AJAX request to the server
+              $.ajax({
+                  type: 'POST',
+                  url: '/submit_contact_form',
+                  data: formData,
+                  success: function (response) {
+                      // Display the success message
+                      $('#myForm')[0].reset();
+                      $('#myButton').trigger('click');
+                      Swal.fire(response)
+  
+                      // Optionally, reset the form
+                     
+                  },
+                  error: function (error) {
+                      console.error('Error:', error);
+                  },
+              });
+          });
+      })
+    </script>
