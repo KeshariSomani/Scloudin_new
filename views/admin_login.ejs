@@ -1,0 +1,45 @@
+<%-include('partials/header')%>
+<div class="mx-auto shadow-2xl rounded-lg border-2 border-gray-200 lg:w-[60%] w-full my-10">
+    <p class="text-center text-2xl font-bold">ADMIN LOGIN</p>
+    <div>
+        <form class="flex flex-col space-y-5 p-10"  method="post" action="/admin_login" id="myLogin" >
+            <label>ADMIN ID</label>
+            <input type="text" name="admin_id" class="border-2 border-gray-200 p-2">
+            <label>ADMIN PASSWORD</label>
+            <input type="password" name="admin_password" class="border-2 border-gray-200 p-2">
+            <button  class="bg-blue-600 p-2 font-bold text-xl text-white" id="myLoginButton">LOGIN</button>
+        </form>
+    </div>
+</div>
+<%-include('partials/footer')%>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      $(document).ready(function()
+      {
+        
+          $('#myLogin').submit(function (event) {
+              event.preventDefault(); 
+              // Prevent the default form submission
+              // Serialize the form data
+              const formData = $(this).serialize();
+              // Send an AJAX request to the server
+              $.ajax({
+                  type: 'POST',
+                  url: '/admin_login',
+                  data: formData,
+                  success: function (response) {
+                      // Display the success message
+                      $('#myLogin')[0].reset();
+                      $('#myLoginButton').trigger('click');
+                      window.location.href = "/admin/admin_dashboard";
+  
+                      // Optionally, reset the form
+                     
+                  },
+                  error: function (error) {
+                    Swal.fire(error.responseText)
+                  },
+              });
+          });
+      })
+    </script>

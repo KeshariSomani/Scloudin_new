@@ -8,11 +8,19 @@ const path = require('path')
 const app = express()
 const port = 4000
 const bodyParser = require('body-parser')
+const adminauth = require('./middleware/adminauth')
 app.use(express.json())
 app.use(bodyParser.urlencoded({
     extended:true
 }))
-
+const session = require('express-session')
+app.use(session(
+    {
+        secret:"Mysecret",
+        resave:false,
+        saveUninitialized:false
+    }
+))
 app.set('view engine','ejs')
 app.set('views','views')
 app.use('/public',express.static('./public'))
@@ -20,18 +28,18 @@ app.use('/assets',express.static('assets'));
 app.get('/', (req, res) => res.render('home'))
 app.get("/careers",mainController.get_career_page)
 app.get("/your_career",mainController.get_single_career_page)
-app.get('/admin_dashboard',(req,res)=>res.render('adminDashboard'))
-app.get('/add_job',mainController.get_add_job_page)
-app.get('/delete_job',mainController.delete_job)
-app.post('/add_job',mainController.add_jobs)
-app.get('/add_blog',mainController.get_add_blog_page)
+app.get('/admin/admin_dashboard',adminauth.adminisLogin,(req,res)=>res.render('adminDashboard'))
+app.get('/admin/add_job',adminauth.adminisLogin,mainController.get_add_job_page)
+app.get('/admin/delete_job',adminauth.adminisLogin,mainController.delete_job)
+app.post('/admin/add_job',adminauth.adminisLogin,mainController.add_jobs)
+app.get('/admin/add_blog',adminauth.adminisLogin,mainController.get_add_blog_page)
 app.get('/about',(req,res)=>res.render('about'))
 app.get('/contact',(req,res)=>res.render('contact'))
 app.get('/hireus',(req,res)=>res.render('hireus'))
 app.get('/services',(req,res)=>res.render('services'))
 app.get('/technology',(req,res)=>res.render('technology'))
 app.get('/products',(req,res)=>res.render('products'))
-app.get('/admin_queries',mainController.get_form_data)
+app.get('/admin/admin_queries',adminauth.adminisLogin,mainController.get_form_data)
 app.get('/your_blog',mainController.get_single_blog_page)
 app.get('/blogs',mainController.get_all_blogs)
 const storage = multer.diskStorage({
@@ -93,7 +101,20 @@ function deleteUploadedFiles(filePath) {
         });
 }
 
-
+app.get('/admin/admin_login',mainController.get_admin_login_page)
+app.post('/admin_login',mainController.admin_login)
+app.get("/admin/admin_logout",(req,res)=>
+{
+    try
+    {
+        req.session.destroy();
+        res.redirect("/admin/admin_login")
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+})
 app.listen(port,()=>{
     database.databaseConnection();
     console.log(`Server is running at ${port}`)

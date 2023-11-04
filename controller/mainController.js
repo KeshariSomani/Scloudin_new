@@ -4,7 +4,7 @@ const jobModel = require('../models/jobModel')
 const blogModel = require('../models/blogModel')
 const multer = require('multer')
 const path = require('path')
-
+const env= require('../environment/env')
 exports.submit_contact_form = async (req,res)=>
 {
     
@@ -156,3 +156,37 @@ exports.get_form_data = async (req,res)=>{
         console.log(error.message)
     }
 }
+
+exports.get_admin_login_page = async (req,res)=>
+{
+    try
+    {
+        res.render('admin_login')
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+}
+
+exports.admin_login= async (req,res)=>
+{
+    try
+    {
+       
+        if(req.body.admin_id==env.admin_id && req.body.admin_password==env.admin_password)
+        {
+            req.session.admin_id = req.body.admin_id
+            res.redirect('/admin/admin_dashboard')
+        }
+        else
+        {
+            res.status(400).json("Invalid credentials")
+        }
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+}
+
