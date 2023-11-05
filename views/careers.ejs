@@ -45,111 +45,43 @@
             </section>
             <!-- Current Job Open Positions -->
             <section class="min-h-screen px-7 my-7" ata-aos-easing="linear" data-aos-duration="1500" data-aos="fade-in">
-                <h2 class="text-[#242331] text-[1.5rem] md:text-[3.125rem] my-[3rem] font-[800] text-center"
-                    ata-aos-easing="linear" data-aos-duration="1500" data-aos="fade-up">Current job
+
+                <h2 class="text-[#242331] text-[1.5rem] md:text-[3.125rem] my-[3rem] font-[800] text-center">Current job
                     open positions
                 </h2>
                 <div
                     class="lg:w-[90%] w-full mx-auto grid grid-cols-1  md:grid-cols-2 gap-[3rem] min-h-[55vh] place-content-center ">
-                    <div ata-aos-easing="linear" data-aos-duration="1500" data-aos="fade-left"
-                        class="bg-[#0B1C98] shadow-md shadow-[#0B1C98] text-white p-[2rem] rounded-[1.875rem] flex flex-col items-start gap-[1rem] justify-between">
-                        <div class="flex flex-col gap-[2rem]  md:h-[50%] md:p-[.8rem] justify-between">
-                            <div class=" flex flex-col gap-[1rem]">
-                                <h2 class=" text-[#fff] text-[1.25rem] md:text-[1.875rem] font-[700]">
-                                    Web
-                                    Designer & Developer</h2>
-                                <p class="text-[#fff] flex gap-[1rem] md:text-[1.25rem] leading-[166.5%] font-[400] ">
-                                    <span>Banglore, India </span> <span>|</span> <span>
-                                        Part Time
-                                    </span>
-                                </p>
-                            </div>
+                    <% job_data.forEach(element=> { %>
+                        <a href="/your_career?id=<%=element._id%>">
+                            <div
+                                class="bg-[#0B1C98] shadow-md shadow-[#0B1C98] text-white p-[2rem] rounded-[1.875rem] flex flex-col items-start gap-[1rem] justify-between">
+                                <div class="flex flex-col gap-[2rem]  md:h-[50%] md:p-[.8rem] justify-between">
+                                    <div class=" flex flex-col gap-[1rem]">
+                                        <h2 class=" text-[#fff] text-[1.25rem] md:text-[1.875rem] font-[700]">
+                                            <%=element.job_title%>
+                                        </h2>
+                                        <p
+                                            class="text-[#fff] flex gap-[1rem] md:text-[1.25rem] leading-[166.5%] font-[400] ">
+                                            <span>
+                                                <%=element.job_location%>
+                                            </span> <span>|</span> <span>
+                                                <%=element.job_type%>
+                                            </span>
+                                        </p>
+                                    </div>
 
-                            <p class="md:text-[1.29rem] text-[.9rem] leading-[157.4%] text-justify ">
-                                It is a long established fact that a reader will be distracted by the readable. Lorem
-                                Ipsum looking at
-                                it layout.</p>
-                        </div>
-                        <button
-                            class="text-[#242331] text-[1rem] md:text-[1.25rem] text-center font-[700] bg-[#ffff] shadow-md  w-fit  p-[.8rem]  px-[rem] md:p-[1.5rem] md:px-[2.18rem] rounded-full">Apply
-                            Now</button>
-                    </div>
-                    <div ata-aos-easing="linear" data-aos-duration="1500" data-aos="fade-right"
-                        class="bg-[#fff] shadow-md shadow-gray-300 border-gray-900 border-[1px] md:border-none text-white p-[2rem] rounded-[1.875rem] flex flex-col items-start gap-[1rem] justify-between">
-                        <div
-                            class="flex flex-col gap-[1.5rem] md:gap-[2rem] h-[50%] p-[.4rem] md:p-[.8rem] justify-between">
-                            <div class=" flex flex-col gap-[1rem]">
-                                <h2 class=" text-[#242331] text-[1.25rem] md:text-[1.875rem] font-[700]">
-                                    Project Manager</h2>
-                                <p
-                                    class="text-[#242331] flex gap-[1rem] md:text-[1.25rem] leading-[166.5%] font-[400] ">
-                                    <span>Banglore, India </span> <span>|</span> <span class="text-[#0B1C98]">
-                                        Full Time
-                                    </span>
-                                </p>
+                                    <p class="md:text-[1.29rem] text-[.9rem] leading-[157.4%] text-justify ">
+                                        <%=element.job_short_description%>
+                                    </p>
+                                </div>
+                                <button
+                                    class="text-[#242331] text-[1rem] md:text-[1.25rem] text-center font-[700] bg-[#ffff] shadow-md  w-fit  p-[.8rem]  px-[rem] md:p-[1.5rem] md:px-[2.18rem] rounded-full">Apply
+                                    Now</button>
                             </div>
-
-                            <p class=" text-[.9rem] md:text-[1.29rem] leading-[157.4%] text-justify text-[#797979] ">
-                                It is a long established fact that a reader will be distracted by the readable. Lorem
-                                Ipsum
-                                looking at it layout.</p>
-                        </div>
-                        <button
-                            class="text-[#242331] md:text-[1.25rem] text-center font-[700] bg-[#ffff] border-[1px] border-solid  shadow-md shadow-gray-300 w-fit p-[.8rem] px-[1.5rem] md:p-[1.5rem] md:px-[2rem] rounded-full">Apply
-                            Now</button>
-                    </div>
-                    <div ata-aos-easing="linear" data-aos-duration="1500" data-aos="fade-left"
-                        class="bg-[#fff] shadow-md shadow-gray-300 border-gray-900 border-[1px] md:border-none text-white p-[2rem] rounded-[1.875rem] flex flex-col items-start gap-[1rem] justify-between">
-                        <div class="flex flex-col gap-[2rem] h-[50%] p-[.8rem] justify-between">
-                            <div class=" flex flex-col gap-[1rem]">
-                                <h2 class=" text-[#242331] text-[1.25rem] md:text-[1.875rem] font-[700]">
-                                    C # Developer
-                                </h2>
-                                <p
-                                    class="text-[#242331] flex gap-[1rem] md:text-[1.25rem] leading-[166.5%] font-[400] ">
-                                    <span>Banglore, India </span> <span>|</span> <span class="text-[#0B1C98]">
-                                        Full Time
-                                    </span>
-                                </p>
-                            </div>
-
-                            <p class="md:text-[1.29rem] text-[.9rem] leading-[157.4%] text-justify text-[#797979] ">
-                                It is a long established fact that a reader will be distracted by the readable. Lorem
-                                Ipsum
-                                looking at it layout.</p>
-                        </div>
-                        <button
-                            class="text-[#242331] md:text-[1.25rem] text-center font-[700] bg-[#ffff] border-[1px] border-solid  shadow-md shadow-gray-300 w-fit p-[.8rem] px-[1.5rem] md:p-[1.5rem] md:px-[2rem] rounded-full">Apply
-                            Now</button>
-                    </div>
-                    <div ata-aos-easing="linear" data-aos-duration="1500" data-aos="fade-right"
-                        class="bg-[#fff] shadow-md shadow-gray-300 border-gray-900 border-[1px] md:border-none text-white p-[2rem] rounded-[1.875rem] flex flex-col items-start gap-[1rem] justify-between">
-                        <div class="flex flex-col gap-[2rem] h-[50%] p-[.8rem] justify-between">
-                            <div class=" flex flex-col gap-[1rem]">
-                                <h2 class=" text-[#242331] text-[1.25rem] md:text-[1.875rem] font-[700]">
-                                    Sales Assistant</h2>
-                                <p
-                                    class="text-[#242331] flex gap-[1rem] md:text-[1.25rem] leading-[166.5%] font-[400] ">
-                                    <span>Banglore, India </span> <span>|</span> <span class="text-[#0B1C98]">
-                                        Full Time
-                                    </span>
-                                </p>
-                            </div>
-
-                            <p class="md:text-[1.29rem] text-[.9rem] leading-[157.4%] text-justify text-[#797979] ">
-                                It is a long established fact that a reader will be distracted by the readable. Lorem
-                                Ipsum
-                                looking at it layout.</p>
-                        </div>
-                        <button
-                            class="text-[#242331] md:text-[1.25rem] text-center font-[700] bg-[#ffff] border-[1px] border-solid  shadow-md shadow-gray-300 w-fit p-[.8rem] px-[1.5rem] md:p-[1.5rem] md:px-[2rem] rounded-full">Apply
-                            Now</button>
-                    </div>
+                        </a>
+                        <%}) %>
 
                 </div>
-
-
-
 
 
             </section>
@@ -224,62 +156,7 @@
                     </div>
                 </div>
 
-                <div
-                    class="mt-8 md:text-leftpx-12  rounded-[1.5rem] md:rounded-[2.5rem] md:min-h-[80vh] border-gray-900 border-[2px] flex justify-center mb-8 lg:mt-12 sm:mt-0 ">
-                    <form
-                        class=" w-full py-[4rem]  relative flex flex-col justify-center items-center  md:px-12 flex flex-col justify-center gap-[1rem]"
-                        method="post">
-                        <div class="flex  flex-col  gap-[.5rem] md:flex-row w-full px-4 justify-between">
-                            <div class="flex flex-col gap-[1rem] items-start justify-start">
-                                <label for="name" class="block mb-2 mt-8 text-[#000000] text-xl  font-bold">Full Name <b
-                                        class="">*</b></label>
-                                <input type="name" name="name" placeholder="john david"
-                                    class=" text-black text-sm border border-[#D3D3D3] rounded-md block w-full lg:w-[35rem] p-2.5"
-                                    required />
-                            </div>
-
-                            <div class="flex flex-col gap-[1rem] items-start justify-start">
-                                <label for="name" class="block mb-2 mt-8 text-[#000000] text-xl  font-bold"> Your Email
-                                    <b class="">*</b></label>
-                                <input type="email" name="last name" placeholder="example@yourmail.com"
-                                    class=" text-black text-sm border border-[#D3D3D3] rounded-md block w-full lg:w-[35rem] p-2.5"
-                                    required />
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col   md:flex-row justify-between px-4 w-full">
-                            <div class="flex flex-col gap-[1rem] items-start justify-start">
-                                <label for="name" class="block mb-2 mt-8 text-[#000000] text-xl  font-bold">Company <b
-                                        class="">*</b></label>
-                                <input type="name" name="name" placeholder="yourcompany name here"
-                                    class=" text-black text-sm border border-[#D3D3D3] rounded-md block w-full lg:w-[35rem] p-2.5"
-                                    required />
-                            </div>
-
-                            <div class="flex flex-col gap-[1rem] items-start justify-start">
-                                <label for="name" class="block mb-2 mt-8 text-[#000000] text-xl  font-bold">Subject <b
-                                        class="">*</b></label>
-                                <input type="email" name="last name" placeholder="how can we help"
-                                    class=" text-black text-sm border border-[#D3D3D3] rounded-md block w-full lg:w-[35rem] p-2.5"
-                                    required />
-                            </div>
-                        </div>
-
-                        <div class="flex w-[80%] md:w-full flex-col gap-[1rem] items-start justify-start">
-                            <label for="email" class="block mb-2 mt-8 text-[#000000] text-xl  font-bold">Message
-                                <b>*</b></label>
-                            <textarea name="message"
-                                class="h-36 text-black text-sm border border-[#D3D3D3] shadow-lg rounded-md block w-full p-2.5"
-                                placeholder="hello there,i would like to talk about how to..."></textarea>
-
-                        </div>
-
-                        <button
-                            class="bg-[#242331] absolute md:-bottom-[8%] md:left-[45%] -bottom-[4%]  text-white text-[.8rem] md:text-2xl font-semibold px-12 py-[1.58rem] w-fit   rounded-full  ">Send
-                            Message
-                        </button>
-                    </form>
-                </div>
+                <%- include('partials/contactform')%>
             </section>
         </main>
         <script>
@@ -297,39 +174,3 @@
         </script>
     </body>
     <%- include('partials/footer')%>
-        <!-- <section class="min-h-screen px-7 my-7">
-    <h2 class="text-[#242331] text-[1.5rem] md:text-[3.125rem] my-[3rem] font-[800] text-center">Current job
-        open positions
-    </h2>
-    <div
-        class="lg:w-[90%] w-full mx-auto grid grid-cols-1  md:grid-cols-2 gap-[3rem] min-h-[55vh] place-content-center ">
-        <% job_data.forEach(element=> { %>
-            <a href="/your_career?id=<%=element._id%>">
-                <div
-                    class="bg-[#0B1C98] shadow-md shadow-[#0B1C98] text-white p-[2rem] rounded-[1.875rem] flex flex-col items-start gap-[1rem] justify-between">
-                    <div class="flex flex-col gap-[2rem]  md:h-[50%] md:p-[.8rem] justify-between">
-                        <div class=" flex flex-col gap-[1rem]">
-                            <h2 class=" text-[#fff] text-[1.25rem] md:text-[1.875rem] font-[700]">
-                                <%=element.job_title%>
-                            </h2>
-                            <p class="text-[#fff] flex gap-[1rem] md:text-[1.25rem] leading-[166.5%] font-[400] ">
-                                <span>
-                                    <%=element.job_location%>
-                                </span> <span>|</span> <span>
-                                    <%=element.job_type%>
-                                </span>
-                            </p>
-                        </div>
-
-                        <p class="md:text-[1.29rem] text-[.9rem] leading-[157.4%] text-justify ">
-                            <%=element.job_short_description%>
-                        </p>
-                    </div>
-                    <button
-                        class="text-[#242331] text-[1rem] md:text-[1.25rem] text-center font-[700] bg-[#ffff] shadow-md  w-fit  p-[.8rem]  px-[rem] md:p-[1.5rem] md:px-[2.18rem] rounded-full">Apply
-                        Now</button>
-                </div>
-            </a>
-            <%}) %>
-
-    </div> -->
