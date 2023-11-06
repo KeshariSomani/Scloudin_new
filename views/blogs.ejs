@@ -1,6 +1,6 @@
 <%-include('partials/header')%>
 
-<img src="../public/images/About_section1.svg" alt="main" class="w-full" />
+<img  src="../public/images/About_section1.svg" alt="main" class="w-full" data-aos="fade-up" data-aos-duration="1500" />
 <div class="flex felx-col justify-center mt-16">
   <div class="w-[596px]">
     <p
@@ -34,3 +34,13 @@
 </div>
 </section>
 <%-include('partials/footer')%>
+<script>
+  AOS.init();
+  AOS.init({
+      // Global settings:
+      debounceDelay: 50, 
+      once: false, 
+      mirror: true, 
+
+  });
+</script>

@@ -253,12 +253,9 @@ data-aos-duration="2000" class="lg:w-1/2 h-48 mx-8 ">
   AOS.init();
   AOS.init({
       // Global settings:
-      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      debounceDelay: 50, 
+      once: false, 
+      mirror: true, 
 
-
-      once: false, // whether animation should happen only once - while scrolling down
-      mirror: true, // whether elements should animate out while scrolling past them
-     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
- 
   });
 </script>
