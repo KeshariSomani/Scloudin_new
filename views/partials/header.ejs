@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,55 +12,58 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito:wght@800&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!--tailwind cdn link-->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <style>
-    .testfont_{
-      font-family: 'Inter';
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 22px;
-    }
+  .testfont_ {
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
 
-    .testfont1{
-      font-family: 'Inter';
-      font-size: 14px;
-      font-weight: 700px;
-      line-height: 22px;
-    }
+  .testfont1 {
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 700px;
+    line-height: 22px;
+  }
 
-    /* navbar styling */
+  /* navbar styling */
 
-   
-    /* navbar styling */
 
-    .section1 {
-        position: relative;
-        text-align: center;
-        color: white;
-      }
-    .centered {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-      .about{
-      font-family: 'MuseoModerno';
-      font-weight: 900;
-      }
-      .poppins{
-        font-family: 'Poppins';
-      }
-      .nutino{
-        font-family: 'Nunito';
-      }
-              /* companies bannner */
+  /* navbar styling */
+
+  .section1 {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .about {
+    font-family: 'MuseoModerno';
+    font-weight: 900;
+  }
+
+  .poppins {
+    font-family: 'Poppins';
+  }
+
+  .nutino {
+    font-family: 'Nunito';
+  }
+
+  /* companies bannner */
   logo-slider {
     --image-size: 100px;
     padding: 20px;
@@ -70,18 +74,21 @@
     position: relative;
     display: flex;
   }
+
   logo-slider div {
     display: flex;
     position: relative;
     animation: marquee 15s linear infinite;
     justify-content: space-around;
   }
+
   logo-slider img {
     display: block;
     min-width: var(--image-size);
     height: var(--image-size);
     margin: 0 1vw;
   }
+
   logo-slider:after {
     content: "";
     position: absolute;
@@ -91,54 +98,56 @@
     top: 0;
     background: linear-gradient(to right, white, rgba(255, 255, 255, 0) 80px, rgba(255, 255, 255, 0) calc(100% - 80px), white);
   }
+
   @media (max-width: 900px) {
     logo-slider {
       --image-size: 50px;
       --image-size: min(max(50px, 10vw), 100px);
     }
   }
-  
+
   @keyframes marquee {
     0% {
       transform: translateX(0%);
     }
+
     100% {
       transform: translateX(-100%);
     }
   }
-  
 </style>
+
 <body>
 
-<!-- header section -->
-<!-- header top -->
-<div class=" bg-[#0B1C98] text-white h-[61px] px-4 flex justify-between"> 
-  <div class="flex items-center gap-2">
-    <span>
-      <img src="../public/images/EnvelopeOpen.svg" alt="main" class="">
-    </span>
-    <p >Email us at : contactus@SCLOUDIN.in</p>
+  <!-- header section -->
+  <!-- header top -->
+  <div class=" bg-[#0B1C98] text-white h-[61px] px-4 flex justify-between">
+    <div class="flex items-center gap-2">
+      <span>
+        <img src="../public/images/EnvelopeOpen.svg" alt="main" class="">
+      </span>
+      <p>Email us at : contactus@SCLOUDIN.in</p>
+    </div>
+
+
+    <div class="flex items-center gap-7 pr-5">
+      <img src="../public/images/Vector.svg" alt="main" class="">
+      <img src="../public/images/Vector (1).svg" alt="main" class="">
+      <img src="../public/images/Vector (2).svg" alt="main" class="">
+      <p class="h-[39px] w-[1px] bg-white "></p>
+      <img src="../public/images/Phone.svg" alt="main" class="">
+      <p class="testfont_">9843078205</p>
+    </div>
   </div>
 
-
-  <div class="flex items-center gap-7 pr-5"> 
-    <img src="../public/images/Vector.svg" alt="main" class="">
-    <img src="../public/images/Vector (1).svg" alt="main" class="">
-    <img src="../public/images/Vector (2).svg" alt="main" class="">
-     <p class="h-[39px] w-[1px] bg-white "></p>
-     <img src="../public/images/Phone.svg" alt="main" class="">
-     <p class="testfont_">9843078205</p>
-  </div>
-</div>
-
-<!-- header bottom -->
+  <!-- header bottom -->
 
 
-  
+
   <div class="navbar flex justify-between px-5  items-center h-[6.8rem]">
     <a class="company-name" href="#"><img src="../public/images/3 1.svg" alt="main" class=""></a>
     <div class="nav-links flex space-x-5 text-[#9747FF] font-semibold text-xl">
-        <a href="/" class="hover:text-2xl hover:underline hover:decoration-yellow-500">Home</a>
+        <a href="/">Home</a>
         <a href="/about">About Us</a>
         <a href="/hireus">Why scloudin</a>
         <a href="/technology">Technology</a>
@@ -149,5 +158,5 @@
         <a href="/blogs">Blogs</a>
 
     </div>
-</div>
-<!-- header section -->
+  </div>
+  <!-- header section -->
