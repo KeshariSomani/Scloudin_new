@@ -36,6 +36,31 @@
 
   /* navbar styling */
 
+  .navbar {
+
+    overflow: hidden;
+  }
+
+  .navbar .company-name {
+    float: left;
+    padding: 10px 20px;
+    color: #9747FF;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+
+  .navbar .nav-links {
+    float: right;
+    padding: 10px 20px;
+  }
+
+
+  .navbar .nav-links a {
+    color: #9747FF;
+    text-decoration: none;
+    margin: 0 10px;
+  }
 
   /* navbar styling */
 
@@ -101,12 +126,100 @@
     background: linear-gradient(to right, white, rgba(255, 255, 255, 0) 80px, rgba(255, 255, 255, 0) calc(100% - 80px), white);
   }
 
+
+  /* crousel */
+
+
+
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    
+  }
+
+  .carousel {
+    display: flex;
+    transition: transform 0.5s;
+    
+  }
+
+  .associationSectionCarousel{
+    display: flex;
+    transition: transform 0.5s;
+  }
+
+  .carousel-item {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 400px;
+    /* Set your desired height */
+    background-color: #FFF;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+
+    
+  }
+
+  .next-button {
+    right:0;
+  }
+
+  /* crousel */
+
+
+
+
   @media (max-width: 900px) {
     logo-slider {
       --image-size: 50px;
       --image-size: min(max(50px, 10vw), 100px);
     }
   }
+
+  @media only screen and (max-width: 1026px) {
+    #fadeshow1 {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #hideDesktopMap {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    #showMobileMap {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    #showCard16Crousel {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #serviceSolutionAreas_cards {
+      display: none;
+    }
+  }
+
 
   @keyframes marquee {
     0% {
@@ -121,9 +234,7 @@
 
 <body>
 
-  <!-- header section -->
-  <!-- header top -->
-  <div class=" bg-[#0B1C98] text-white h-[61px] px-4 flex justify-between">
+  <div id="fadeshow1" class=" bg-[#0B1C98] text-white h-[61px] px-4 flex justify-between">
     <div class="flex items-center gap-2">
       <span>
         <img src="../public/images/EnvelopeOpen.svg" alt="main" class="">
@@ -132,7 +243,7 @@
     </div>
 
 
-    <div class="flex items-center gap-7 pr-5">
+    <div class=" flex items-center gap-7 pr-5">
       <img src="../public/images/Vector.svg" alt="main" class="">
       <img src="../public/images/Vector (1).svg" alt="main" class="">
       <img src="../public/images/Vector (2).svg" alt="main" class="">
@@ -144,21 +255,81 @@
 
   <!-- header bottom -->
 
-
-
-  <div class="navbar flex justify-between px-5  items-center h-[6.8rem]">
-    <a class="company-name" href="#"><img src="../public/images/3 1.svg" alt="main" class=""></a>
-    <div class="nav-links flex space-x-5 text-[#9747FF] font-semibold text-xl">
-        <a href="/">Home</a>
-        <a href="/about">About Us</a>
-        <a href="/hireus">Why scloudin</a>
-        <a href="/technology">Technology</a>
-        <a href="/products">Products</a>
-        <a href="/services">Services</a>
-        <a href="/careers">Careers</a>
-        <a href="/contact">Contact us</a>
-        <a href="/blogs">Blogs</a>
-
-    </div>
   </div>
+
+
+  <!-- Navbar goes here -->
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-[95rem] lg:px-6 ">
+      <div class="flex justify-between lg:">
+
+        <div class="">
+          <!-- Website Logo -->
+          <a href="#" class="flex items-center py-4 px-2">
+            <img src="../public/images/3 1.svg" alt="Logo" class=" ">
+          </a>
+        </div>
+        <!-- Primary Navbar items -->
+        <div class="hidden md:flex items-center space-x-1 gap-4 uppercase">
+          <a href="/" class="py-4 px-2 text-[#9747FF] font-bold ">Home</a>
+          <a href="/about" class="py-4 px-2 text-[#9747FF]  hover:font-semibold transition duration-300">About Us </a>
+          <a href="/about" class="py-4 px-2 text-[#9747FF]  hover:font-semibold transition duration-300">Why Scloudin</a>
+          <a href="/technology" class="py-4 px-2 text-[#9747FF]  hover:font-semibold transition duration-300">Technology</a>
+          <a href="/products" class="py-4 px-2 text-[#9747FF]  hover:font-semibold transition duration-300">Products</a>
+          <a href="/services" class="py-4 px-2 text-[#9747FF]  hover:font-semibold transition duration-300">services</a>
+          <a href="/careers" class="py-4 px-2 text-[#9747FF]  hover:font-semibold transition duration-300">careers</a>
+          <a href="/contact" class="py-4 px-2 text-[#9747FF]  hover:font-semibold transition duration-300">Contact Us</a>
+          <a href="/blogs" class="py-4 px-2 text-[#9747FF]  hover:font-semibold transition duration-300">Blogs</a>
+
+        </div>
+
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button class="outline-none mobile-menu-button px-4 ">
+            <svg class=" w-8 h-8 text-[#0B1C98] hover:font-semibold  " x-show="!showMenu" fill="none"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div class="hidden mobile-menu">
+      <ul class="">
+        <li class="active"><a href="index.html"
+            class="block text-sm px-2 py-4 text-white bg-[#9747FF] font-semibold">Home</a></li>
+        <li><a href="/"
+            class="block text-sm  px-2 py-4 hover:bg-[#9747FF] hover:text-white transition duration-300">About Us</a>
+        </li>
+        <li><a href="/about" class="block text-sm  px-2 py-4 hover:bg-[#9747FF] transition duration-300">Why
+            Scloudin</a></li>
+        <li><a href="/technology"
+            class="block text-sm  px-2 py-4 hover:bg-[#9747FF] transition duration-300">Technology</a>
+        </li>
+        <li><a href="/products" class="block text-sm  px-2 py-4 hover:bg-[#9747FF] transition duration-300">Products</a>
+        </li>
+        <li><a href="/services" class="block text-sm  px-2 py-4 hover:bg-[#9747FF] transition duration-300">Services</a>
+        </li>
+        <li><a href="/careers" class="block text-sm  px-2 py-4 hover:bg-[#9747FF] transition duration-300">Careers</a>
+        </li>
+        <li><a href="/contact" class="block text-sm  px-2 py-4 hover:bg-[#9747FF] transition duration-300">Contact Us</a>
+        </li>
+        <li><a href="/blogs" class="block text-sm  px-2 py-4 hover:bg-[#9747FF] transition duration-300">Blogs</a></li>
+
+      </ul>
+    </div>
+    <script>
+
+      const btn = document.querySelector("button.mobile-menu-button");
+      const menu = document.querySelector(".mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+    </script>
+  </nav>
+
   <!-- header section -->
