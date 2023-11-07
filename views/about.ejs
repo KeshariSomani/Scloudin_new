@@ -6,15 +6,101 @@
      .weight{
         font-weight: 900;
      } 
-</style>
 
+     .pro{
+      position: absolute;
+      transform: translate(-50%,-50%);
+      
+  }
+  .progress1{
+      position: relative;
+      height: 8px;
+      width: 100%;
+      border: 10px solid blue;
+      border-radius: 15px;
+  }
+  .progress1 .color{
+      position: absolute;
+      padding: 0%;
+      background-color: white;
+      width: 0px;
+      top: -2.5px;
+      height: 10px;
+      border-radius: 15px;
+      animation: progres 4s infinite linear;    
+  }
+  @keyframes progres{
+      0%{
+        width: 0%;
+      }
+      25%{
+          width: 50%;
+      }
+      50%{
+          width: 75%;
+      }
+      75%{
+          width: 85%;
+      }
+      100%{
+          width: 100%;
+      }
+  };
+
+
+
+.new {
+    --bar-color: green;
+    --transition-effect: all 10ms linear;
+  }
+  
+  .loader {
+    width: 100%;
+    height: 100vh;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .loader {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    position: relative;
+  }
+  .percent {
+    transition: var(--transition-effect);
+    font-size: 16px;
+    padding: 0 10px;
+    font-weight: 500;
+  }
+  .bar {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    z-index: -1;
+    border-top: 14px solid var(--bar-color);
+    transform-origin: left;
+    transform: scalex(0%);
+    transition: var(--transition-effect);
+  }
+  
+  
+  
+</style>
 <!--section 1-->
+
+
+
+
 <div  data-aos-easing="linear" data-aos-duration="1500" data-aos="fade-down" class="mt-4">
     <img src="../public/images/About_Sec1_BG.svg" alt="section1">
 </div>
 <main class="lg:mx-16">
   <!--section 2-->
-  <div data-aos-easing="linear" data-aos-duration="1500" data-aos="fade-down"  class="mt-8 lg:mt-24 nunito"> 
+  <div   class="mt-8 lg:mt-24 nunito"> 
     <p  data-aos="zoom-in" class="mt-8 text-[#0B1C98] font-extrabold text-4xl md:text-7xl lg:text-7xl text-center">About US</p>
     <p class="text-center mt-4 text-[#797979] text-md md:text-xl lg:text-2xl">We are professional in IT Solutions And Services </p>
  </div>
@@ -233,17 +319,38 @@ data-aos-duration="2000" class="lg:w-1/2 h-48 mx-8 ">
 
 <!--Section 9-->
  <div class="lg:flex flex-row justify-between mx-8 lg:mx-16 mt-16 lg:mt-24 lg:mb-16 mb-8">
-   <div>
-     <p class="text-[#0B1C98] text-2xl lg:text-3xl font-bold">Graphic Design </p>
-      <img src="../public/images/About_Sec9_GraphicBar.svg" alt="" class="mt-4">
-      <p class="text-[#0B1C98] text-2xl lg:text-3xl font-bold mt-4 lg:mt-12">Web Design </p>
-      <img src="../public/images/About_Sec9_DesignBar.svg" alt="" class="mt-4">
+   <div data-aos="fade-up" class="w-full lg:w-[50%]">
+   
+    <p class="text-[#0B1C98] text-2xl lg:text-3xl font-bold">Graphic Design </p>
+     <div class="pro w-[65%] md:ml-36">
+      <div class="progress1 w-full ml-24 lg:ml-48 mt-12">
+        <div class="color"></div>
+      </div>
     </div>
-    <div>
-      <p class="text-[#0B1C98] text-2xl lg:text-3xl font-bold mt-4 lg:mt-0">Mobile Application </p>
-       <img src="../public/images/About_Sec9_Mobile_Progress Bar.svg" alt="" class="mt-4">
-       <p class="text-[#0B1C98] text-2xl lg:text-3xl font-bold mt-4 lg:mt-12">Web Development </p>
-       <img src="../public/images/About_Sec9_WebBar.svg" alt="" class="mt-4">
+
+      <p class="text-[#0B1C98] text-2xl lg:text-3xl font-bold mt-8 lg:mt-12">Web Design </p>
+      <div class="pro w-[65%] md:ml-36">
+        <div class="progress1 w-full ml-24 lg:ml-48 mt-12">
+          <div class="color"></div>
+        </div>
+      </div>
+
+      
+    
+    </div>
+    <div class="w-full lg:w-[50%] mb-12" data-aos="fade-up">
+      <p class="text-[#0B1C98] text-2xl lg:text-3xl font-bold mt-8 lg:mt-0">Mobile Application </p>
+     <div class="pro w-[65%] ml-8 md:ml-32 lg:mx-12">
+      <div class="progress1 w-full ml-16 md:ml-28 lg:ml-32 mt-12">
+        <div class="color"></div>
+      </div>
+    </div>
+       <p class="text-[#0B1C98] text-2xl lg:text-3xl font-bold mt-8 lg:mt-12">Web Development </p>
+       <div class="pro w-[65%] ml-8 md:ml-32 lg:mx-12">
+        <div class="progress1 w-full ml-16 md:ml-28 lg:ml-32 mt-12 ">
+          <div class="color"></div>
+        </div>
+      </div>
      </div>
  </div>
 </main>
@@ -258,4 +365,29 @@ data-aos-duration="2000" class="lg:w-1/2 h-48 mx-8 ">
       mirror: true, 
 
   });
+
+
+ 
+  
+const replay = document.querySelector(".loader");
+const bar = document.querySelector(".bar");
+const loader = document.querySelector(".percent");
+
+let load = 0;
+
+setInterval(() => {
+  load = load + Math.floor(Math.random() * 5 + 1);
+  if (load < 100) {
+    loader.textContent = load + "%";
+    bar.style.transform = `scalex(${load}%)`;
+  } else {
+    bar.style.transform = `scalex(80%)`;
+    loader.textContent = "80%";
+  }
+}, 90);
+
+replay.addEventListener("mouseover", function () {
+  load = 0;
+});
+
 </script>
