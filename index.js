@@ -130,7 +130,7 @@ app.post('/add_header_email',async (req,res)=>{
     }
     catch(error)
     {
-        console.log(error.message)
+       return res.status(400).json({error:error.message})
     }
 })
 
@@ -142,7 +142,7 @@ app.post('/update_header_email',async (req,res)=>{
     }
     catch(error)
     {
-        console.log(error.message)
+        return res.status(400).json({error:error.message})
     }
 
 })
@@ -156,7 +156,7 @@ app.get('/get_header_email', async(req,res)=>
     }
     catch(error)
     {
-        console.log(error.message)
+        return res.status(400).json({error:error.message})
     }
 })
 
@@ -189,7 +189,7 @@ app.post("/add_banner_image",bannerupload.single('banner_image'),async (req,res)
     }
     catch(error)
     {
-        console.log(error.message)
+        return res.status(400).json({error:error.message})
     }
 })
 
@@ -201,7 +201,7 @@ app.get('/get_banner_images',async (req,res)=>{
     }
     catch(error)
     {
-        console.log(error.message)
+        return res.status(400).json({error:error.message})
     }
 })
 
@@ -217,7 +217,7 @@ app.post('/delete_banner_image',async (req,res)=>{
     }
     catch(error)
     {
-        console.log(error.message)
+        return res.status(400).json({error:error.message})
     }
 })
 
@@ -229,7 +229,7 @@ app.post('/add_about_content',async (req,res)=>{
     }
     catch(error)
     {
-        console.log(error.message)
+        return res.status(400).json({error:error.message})
     }
 })
 
@@ -241,7 +241,7 @@ app.get('/get_about_content',async (req,res)=>{
     }
     catch(error)
     {
-        console.log(error.message)
+        return res.status(400).json({error:error.message})
     }
 })
 
@@ -253,7 +253,7 @@ app.post('/update_about_content',async (req,res)=>{
     }
     catch(error)
     {
-        console.log(error.message)
+        return res.status(400).json({error:error.message})
     }
 })
 
@@ -267,7 +267,7 @@ app.post('/add_product_card', async (req,res)=>{
     }
     catch(error)
     {
-        console.log(error.message)
+        return res.status(400).json({error:error.message})
     }
 })
 
@@ -279,7 +279,7 @@ app.get('/get_product_card',async (req,res)=>{
     }
     catch(error)
     {
-        console.log(error.message)
+            return res.status(400).json({error:error.message})
     }
 })
 
@@ -290,7 +290,7 @@ app.post('/delete_product_card',async (req,res)=>{
     }
     catch(error)
     {
-        console.log(error.message)
+        return res.status(400).json({error:error.message})
     }
 })
 
@@ -303,7 +303,7 @@ app.post('/add_footer_content',async (req,res)=>{
     }
     catch(error)
     {
-        console.log(error.message)
+        return res.status(400).json({error:error.message})
     }
 
 })
@@ -316,7 +316,7 @@ app.get('/get_footer_content',async (req,res)=>{
     }
     catch(error)
     {
-        console.log(error.message)
+        return res.status(400).json({error:error.message})
     }
 
 })
@@ -329,7 +329,7 @@ app.post('/update_footer_content',async (req,res)=>{
     }
     catch(error)
     {
-        console.log(error.message)
+        return res.status(400).json({error:error.message})
     }
 
 })
