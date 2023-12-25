@@ -2,6 +2,11 @@ const express = require('express')
 const database = require('./database/connection')
 const mainController = require('./controller/mainController')
 const blogModel = require('./models/blogModel')
+const headerMail = require('./models/header_mail')
+const bannerModel = require('./models/bannerModel')
+const aboutContentModel = require('./models/aboutContentModel')
+const productcardModel = require('./models/productcardModel')
+const footerModel = require('./models/footerModel')
 const fs = require('fs')
 const multer = require('multer')
 const path = require('path')
@@ -115,6 +120,223 @@ app.get("/admin/admin_logout",(req,res)=>
         console.log(error.message)
     }
 })
+// Dynamic Pages API
+
+app.post('/add_header_email',async (req,res)=>{
+    try
+    {
+        const header_email = await headerMail.create(req.body)
+        res.status(200).json("Header Email successfully added")
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+})
+
+app.post('/update_header_email',async (req,res)=>{
+    try
+    {
+         const header_email = await headerMail.findByIdAndUpdate({_id:req.body.id},{$set:{header_email:req.body.header_email}})
+         res.status(200).json("Header Email successfully updated")
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+
+})
+
+app.get('/get_header_email', async(req,res)=>
+{
+    try
+    {
+       const header_email = await headerMail.findOne()
+       res.status(200).json(header_email)
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+})
+
+
+
+
+const bannerstorage = multer.diskStorage({
+    destination:function(req,file,cb){
+        cb(null,path.join(__dirname,'/public/bannerImages'),function(error,success){
+            if(error) throw error
+        })
+    },
+    filename:function(req,file,cb){
+        const name = Date.now()+'-'+file.originalname
+        cb(null,name),function(error,success){
+            if(error) throw error
+        }
+    }
+
+})
+
+const bannerupload = multer({storage:bannerstorage})
+
+app.post("/add_banner_image",bannerupload.single('banner_image'),async (req,res)=>{
+    try
+    {
+        req.body.banner_image_url = req.file.filename
+        const banner_data = await bannerModel.create(req.body)
+        res.status(200).json({data:banner_data})
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+})
+
+app.get('/get_banner_images',async (req,res)=>{
+    try
+    {
+        const banner_data = await bannerModel.find()
+        res.status(200).json({data:banner_data})
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+})
+
+app.post('/delete_banner_image',async (req,res)=>{
+    try
+    {
+        const banner_id = req.body.banner_id
+        const banner_data = await bannerModel.findById({_id:banner_id})
+        const image_path = path.join(__dirname,'/public/bannerImages',banner_data.banner_image_url)
+        deleteUploadedFiles(image_path)
+        const banner = await bannerModel.findByIdAndDelete(banner_id)
+        res.status(200).json("Banner Image successfully deleted")
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+})
+
+app.post('/add_about_content',async (req,res)=>{
+    try
+    {
+        const about_content = await aboutContentModel.create(req.body)
+        res.status(200).json("About Content successfully added")
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+})
+
+app.get('/get_about_content',async (req,res)=>{
+    try
+    {
+        const about_content = await aboutContentModel.findOne()
+        res.status(200).json(about_content)
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+})
+
+app.post('/update_about_content',async (req,res)=>{
+    try
+    {
+           const about_content = await aboutContentModel.findByIdAndUpdate({_id:req.body.id},{$set:{about_heading:req.body.about_heading,about_description:req.body.about_description}})
+           res.status(200).json("About Content successfully updated")
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+})
+
+
+app.post('/add_product_card', async (req,res)=>{
+
+    try
+    {
+        const product_card = await productcardModel.create(req.body)
+        res.status(200).json("Product Card successfully added")
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+})
+
+app.get('/get_product_card',async (req,res)=>{
+    try
+    {
+        const product_card = await productcardModel.find()
+        res.status(200).json(product_card)
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+})
+
+app.post('/delete_product_card',async (req,res)=>{
+    try{
+            const product_card = await productcardModel.findByIdAndDelete({_id:req.body.id})
+            res.status(200).json("Product Card successfully deleted")
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+})
+
+app.post('/add_footer_content',async (req,res)=>{
+
+    try
+    {
+        const footer_content = await footerModel.create(req.body)
+        res.status(200).json("Footer Content successfully added")
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+
+})
+
+app.get('/get_footer_content',async (req,res)=>{
+    try
+    {
+        const footer_content = await footerModel.findOne()
+        res.status(200).json(footer_content)
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+
+})
+
+app.post('/update_footer_content',async (req,res)=>{
+    try
+    {
+         const footer_content = await footerModel.findByIdAndUpdate({_id:req.body.id},{$set:{mobile_number:req.body.mobile_number,email:req.body.email,address:req.body.address}})
+         res.status(200).json("Footer Content successfully updated")
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+
+})
+
+
+
+
 app.listen(port,()=>{
     database.databaseConnection();
     console.log(`Server is running at ${port}`)
