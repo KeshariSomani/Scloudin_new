@@ -265,7 +265,7 @@ app.post('/add_product_card', async (req,res)=>{
     try
     {
         const product_card = await productcardModel.create(req.body)
-        res.status(200).json("Product Card successfully added")
+        res.redirect('/admin/adminHome')
     }
     catch(error)
     {
@@ -285,10 +285,10 @@ app.get('/get_product_card',async (req,res)=>{
     }
 })
 
-app.post('/delete_product_card',async (req,res)=>{
+app.get('/delete_product_card',async (req,res)=>{
     try{
-            const product_card = await productcardModel.findByIdAndDelete({_id:req.body.id})
-            res.status(200).json("Product Card successfully deleted")
+            const product_card = await productcardModel.findByIdAndDelete({_id:req.query.id})
+            res.redirect('/admin/adminHome')
     }
     catch(error)
     {
@@ -327,7 +327,7 @@ app.post('/update_footer_content',async (req,res)=>{
     try
     {
          const footer_content = await footerModel.findByIdAndUpdate({_id:req.body.id},{$set:{mobile_number:req.body.mobile_number,email:req.body.email,address:req.body.address}})
-         res.status(200).json("Footer Content successfully updated")
+         res.redirect('/admin/adminHome')
     }
     catch(error)
     {

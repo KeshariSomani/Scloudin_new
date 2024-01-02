@@ -203,10 +203,10 @@ exports.get_manage_home_page = async (req,res)=>
         const header_email = await headerMail.findOne()
         const banner_data = await bannerModel.find()
         const about_content = await aboutContentModel.findOne()
-        const product_cards = await productcardModel.find()
+        const product_data = await productcardModel.find()
         const footer_data = await footerModel.findOne()
        
-        res.render('adminHome',{header_email:header_email,banner_data:banner_data,about_content:about_content,product_cards:product_cards,footer_data:footer_data})
+        res.render('adminHome',{header_email:header_email,banner_data:banner_data,about_content:about_content,product_data,footer_data:footer_data})
     }
     catch(error)
     {
