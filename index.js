@@ -38,6 +38,7 @@ app.get('/admin/add_job',adminauth.adminisLogin,mainController.get_add_job_page)
 app.get('/admin/delete_job',adminauth.adminisLogin,mainController.delete_job)
 app.post('/admin/add_job',adminauth.adminisLogin,mainController.add_jobs)
 app.get('/admin/add_blog',adminauth.adminisLogin,mainController.get_add_blog_page)
+app.get('/admin/adminHome',mainController.get_manage_home_page)
 app.get('/about',(req,res)=>res.render('about'))
 app.get('/contact',(req,res)=>res.render('contact'))
 app.get('/hireus',(req,res)=>res.render('hireus'))
@@ -137,8 +138,8 @@ app.post('/add_header_email',async (req,res)=>{
 app.post('/update_header_email',async (req,res)=>{
     try
     {
-         const header_email = await headerMail.findByIdAndUpdate({_id:req.body.id},{$set:{header_email:req.body.header_email}})
-         res.status(200).json("Header Email successfully updated")
+         const header_email = await headerMail.findByIdAndUpdate({_id:req.body.id},{$set:{header_email:req.body.email}})
+         res.redirect('/admin/adminHome')
     }
     catch(error)
     {
@@ -185,7 +186,7 @@ app.post("/add_banner_image",bannerupload.single('banner_image'),async (req,res)
     {
         req.body.banner_image_url = req.file.filename
         const banner_data = await bannerModel.create(req.body)
-        res.status(200).json({data:banner_data})
+        res.redirect('/admin/adminHome')
     }
     catch(error)
     {
@@ -205,15 +206,15 @@ app.get('/get_banner_images',async (req,res)=>{
     }
 })
 
-app.post('/delete_banner_image',async (req,res)=>{
+app.get('/delete_banner_image',async (req,res)=>{
     try
     {
-        const banner_id = req.body.banner_id
+        const banner_id = req.query.banner_id
         const banner_data = await bannerModel.findById({_id:banner_id})
         const image_path = path.join(__dirname,'/public/bannerImages',banner_data.banner_image_url)
         deleteUploadedFiles(image_path)
         const banner = await bannerModel.findByIdAndDelete(banner_id)
-        res.status(200).json("Banner Image successfully deleted")
+        res.redirect('/admin/adminHome')
     }
     catch(error)
     {
@@ -248,8 +249,9 @@ app.get('/get_about_content',async (req,res)=>{
 app.post('/update_about_content',async (req,res)=>{
     try
     {
+         
            const about_content = await aboutContentModel.findByIdAndUpdate({_id:req.body.id},{$set:{about_heading:req.body.about_heading,about_description:req.body.about_description}})
-           res.status(200).json("About Content successfully updated")
+           res.redirect('/admin/adminHome')
     }
     catch(error)
     {
