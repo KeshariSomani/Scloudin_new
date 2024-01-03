@@ -2,6 +2,11 @@ const contactModel = require('../models/contactModel')
 const {contactFormValidation} = require('../validations/formValidations')
 const jobModel = require('../models/jobModel')
 const blogModel = require('../models/blogModel')
+const headerMail = require('../models/header_mail')
+const bannerModel = require('../models/bannerModel')
+const aboutContentModel = require('../models/aboutContentModel')
+const productcardModel = require('../models/productcardModel')
+const footerModel = require('../models/footerModel')
 const multer = require('multer')
 const path = require('path')
 const env= require('../environment/env')
@@ -190,3 +195,21 @@ exports.admin_login= async (req,res)=>
     }
 }
 
+exports.get_manage_home_page = async (req,res)=>
+
+{
+    try
+    {
+        const header_email = await headerMail.findOne()
+        const banner_data = await bannerModel.find()
+        const about_content = await aboutContentModel.findOne()
+        const product_data = await productcardModel.find()
+        const footer_data = await footerModel.findOne()
+       
+        res.render('adminHome',{header_email:header_email,banner_data:banner_data,about_content:about_content,product_data,footer_data:footer_data})
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+}

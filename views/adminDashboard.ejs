@@ -1,6 +1,6 @@
 <%-include('partials/adminNavbar')%>
 <section>
-  <div class=" flex justify-between p-10">
+  <div class=" flex flex-wrap justify-between gap-10 p-10">
     <div class="bg-white shadow-2xl text-center p-5 flex flex-col space-y-2 border-2 border-gray-400 w-[30%]">
         <p class="font-bold text-3xl">Job Section</p>
         <a href="/admin/add_job" class="rounded-lg px-5 py-2  bg-blue-600 text-white font-bold">Manage</a>
@@ -9,6 +9,10 @@
         <p class="font-bold text-3xl">Blog Section</p>
         <a href="/admin/add_blog" class="rounded-lg px-5 py-2  bg-blue-600 text-white font-bold">Manage</a>
     </div>
+    <div class="bg-white shadow-2xl text-center p-5 flex flex-col space-y-2 border-2 border-gray-400 w-[30%]">
+      <p class="font-bold text-3xl">Home Page</p>
+      <a href="/admin/adminHome" class="rounded-lg px-5 py-2  bg-blue-600 text-white font-bold">Manage</a>
+  </div>
     <div class="bg-white shadow-2xl text-center p-5 flex flex-col space-y-2 border-2 border-gray-400 w-[30%]">
         <p class="font-bold text-3xl">Queries</p>
         <a href="/admin/admin_queries" class="rounded-lg px-5 py-2  bg-blue-600 text-white font-bold">Manage</a>
