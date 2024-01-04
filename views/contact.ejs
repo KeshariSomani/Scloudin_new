@@ -1,4 +1,4 @@
-<%- include('partials/header')%>
+<%-include('partials /header')%>
     <main>
         <!-- Banner section  -->
         <section data-aos-easing="linear" data-aos-duration="1500" data-aos="fade-up"
@@ -7,9 +7,9 @@
         </section>
         <!-- contact us Section -->
         <section data-aos-easing="linear" data-aos-duration="1500" data-aos="fade-up"
-            class="my-[8rem] min-h-screen  px-7 font-Nunito">
+            class="md:px-[5vw] px-7 font-Nunito">
             <p data-aos-easing="linear" data-aos-duration="1500" data-aos="zoom-in"
-                class="mt-8 text-[#242331] text-[2rem] md:text-5xl md:text-7xl lg:text-7xl text-center font-extrabold nunito ">
+                class="mt-8 text-[#000000a6] text-[2rem] md:text-5xl md:text-7xl lg:text-6xl text-center font-extrabold nutino ">
                 Get in
                 touch
                 today!</p>
@@ -35,117 +35,122 @@
                 </div>
             </div>
             <!--Section 21-->
-            <%- include('partials/contactform')%>
+
         </section>
-
-        <!-- Map Section -->
-        <section data-aos-easing="linear" data-aos-duration="1500" data-aos="fade-up"
-            class="md:min-h-screen md:my-[7rem]  ">
-            <h2
-                class="md:text-[4rem] text-[1.75rem] text-start leading-normal md:leading-[70px] w-[90%] mx-auto font-[800] text-[#0B1C98] font-Nunito md:my-[7rem]">
-                Address
-                for
-                Below
-                Countries :
-            </h2>
-            <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200"
-                class="bg-center md:bg-cover bg-contain w-full h-[40vh] lg:h-[90vh] bg-no-repeat relative"
-                style="background-image: url(../public/images/contactusPage_2_Map.png);">
-                <div
-                    class="bg-[#D9D9D9] absolute bottom-[48%] right-[26%] md:bottom-[39%] md:right-[28%] flex justify-center items-center   h-[5vmin] w-[5vmin]  rounded-full">
-                    <button class="w-[3.5vmin] h-[3.5vmin] rounded-full blur-[2px] bg-[#0B1C98]">
-                    </button>
-                </div>
-                <div
-                    class="bg-[#D9D9D9] flex justify-center absolute top-[40%] left-[20%] md:top-[30%] md:left-[20%] items-center    h-[5vmin] w-[5vmin] rounded-full">
-                    <button class="w-[3.5vmin] h-[3.5vmin] rounded-full blur-[2px] bg-[#F58A07]">
-                    </button>
-                </div>
-                <div
-                    class="bg-[#D9D9D9] flex justify-center absolute top-[40%] right-[50%] md:top-[25%] md:left-[50%] items-center  h-[5vmin] w-[5vmin]  rounded-full">
-                    <button class="w-[3.5vmin] h-[3.5vmin] rounded-full blur-[2px] bg-[#39CA21]">
-                    </button>
-                </div>
-                <div
-                    class="bg-[#D9D9D9] flex justify-center absolute top-[20%] left-[10%] md:top-[20%] md:left-[10%] items-center   h-[5vmin] w-[5vmin] rounded-full">
-                    <button class="w-[3.5vmin] h-[3.5vmin] rounded-full blur-[2px] bg-[#E78697]">
-                    </button>
-                </div>
-            </div>
-            <div class="w-[100%]  mx-auto my-[1rem] md:my-[7rem] flex-col gap-[2rem] flex items-start">
-                <div class="relative ">
-                    <div class="flex justify-start w-[90%] mx-auto items-center gap-[3rem]">
-                        <div
-                            class="bg-[#D9D9D9] flex justify-center items-center   h-[2.7vmax] w-[2.7vmax]  rounded-full">
-                            <button class="w-[2vmax] h-[2vmax] rounded-full blur-[2px] bg-[#0B1C98]">
-                            </button>
-                        </div>
-                        <h2 class="text-[#242331] text-[1.25rem] text-justify md:text-[3rem] font-Nunito font-[600]">
-                            India -
-                            Banglore , Pune , Hydrebad
-                            , Indore
-                        </h2>
-
+        <%-include('partials /contactform')%>
+            <!-- Map Section -->
+            <section data-aos-easing="linear" data-aos-duration="1500" data-aos="fade-up"
+                class="md:min-h-screen md:my-[7rem]  ">
+                <h2
+                    class="md:text-[4rem] text-[1.75rem] text-start leading-normal md:leading-[70px] w-[90%] mx-auto font-[800] text-[#0B1C98] font-Nunito md:my-[7rem]">
+                    Address
+                    for
+                    Below
+                    Countries :
+                </h2>
+                <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200"
+                    class="bg-center md:bg-cover bg-contain w-full h-[40vh] lg:h-[90vh] bg-no-repeat relative"
+                    style="background-image: url(../public/images/contactusPage_2_Map.png);">
+                    <div
+                        class="bg-[#D9D9D9] absolute bottom-[48%] right-[26%] md:bottom-[39%] md:right-[28%] flex justify-center items-center   h-[5vmin] w-[5vmin]  rounded-full">
+                        <button class="w-[3.5vmin] h-[3.5vmin] rounded-full blur-[2px] bg-[#0B1C98]">
+                        </button>
                     </div>
                     <div
-                        class="w-[100%]  bg-[#EDEFF6] flex flex-col justify-start items-center gap-[1.5rem] py-[3rem] px-[2rem] ">
-                        <div class="w-[90%] mx-auto flex flex-col md:flex-row items-start justify-start">
-                            <h2 class="text-[#000000] text-[1.2rem] font-[500] poppins " style="text-wrap: nowrap;">
+                        class="bg-[#D9D9D9] flex justify-center absolute top-[40%] left-[20%] md:top-[30%] md:left-[20%] items-center    h-[5vmin] w-[5vmin] rounded-full">
+                        <button class="w-[3.5vmin] h-[3.5vmin] rounded-full blur-[2px] bg-[#F58A07]">
+                        </button>
+                    </div>
+                    <div
+                        class="bg-[#D9D9D9] flex justify-center absolute top-[40%] right-[50%] md:top-[25%] md:left-[50%] items-center  h-[5vmin] w-[5vmin]  rounded-full">
+                        <button class="w-[3.5vmin] h-[3.5vmin] rounded-full blur-[2px] bg-[#39CA21]">
+                        </button>
+                    </div>
+                    <div
+                        class="bg-[#D9D9D9] flex justify-center absolute top-[20%] left-[10%] md:top-[20%] md:left-[10%] items-center   h-[5vmin] w-[5vmin] rounded-full">
+                        <button class="w-[3.5vmin] h-[3.5vmin] rounded-full blur-[2px] bg-[#E78697]">
+                        </button>
+                    </div>
+                </div>
+                <div class="w-[100%]  mx-auto my-[1rem] md:my-[7rem] flex-col gap-[2rem] flex items-start">
+                    <div class="relative ">
+                        <div class="flex justify-start w-[90%] mx-auto items-center gap-[3rem]">
+                            <div
+                                class="bg-[#D9D9D9] flex justify-center items-center   h-[2.7vmax] w-[2.7vmax]  rounded-full">
+                                <button class="w-[2vmax] h-[2vmax] rounded-full blur-[2px] bg-[#0B1C98]">
+                                </button>
+                            </div>
+                            <h2
+                                class="text-[#242331] text-[1.25rem] text-justify md:text-[3rem] font-Nunito font-[600]">
+                                India -
+                                Banglore , Pune , Hydrebad
+                                , Indore
+                            </h2>
 
-                                Address -</h2>
+                        </div>
+                        <div
+                            class="w-[100%]  bg-[#EDEFF6] flex flex-col justify-start items-center gap-[1.5rem] py-[3rem] px-[2rem] ">
+                            <div class="w-[90%] mx-auto flex flex-col md:flex-row items-start justify-start">
+                                <h2 class="text-[#000000] text-[1.2rem] font-[500] poppins " style="text-wrap: nowrap;">
 
-                            <span class="mx-2 nunito text-[.825rem] text-[#797979] capitalize"> Lorem ipsum dolor sit
-                                amet,
-                                consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat. Duis
-                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur. Excepteur sint
-                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                est laborum."</span>
+                                    Address -</h2>
+
+                                <span class="mx-2 nunito text-[.825rem] text-[#797979] capitalize"> Lorem ipsum dolor
+                                    sit
+                                    amet,
+                                    consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna
+                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip ex ea commodo consequat. Duis
+                                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                    nulla pariatur. Excepteur sint
+                                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                                    est laborum."</span>
+                            </div>
+                            <div class="w-[90%] mx-auto flex flex-col md:flex-row items-start justify-start">
+                                <h2 class="text-[#000000] text-[1.2rem] font-[500] poppins">Contact -</h2>
+                                <p class="mx-2 nunito text-[.825rem] text-[#797979]">+91 9483078205/9342979716</p>
+                            </div>
+                            <div class="w-[90%] mx-auto flex flex-col md:flex-row items-start justify-start">
+                                <h2 class="text-[#000000] text-[1.2rem] font-[500] poppins">Email id - </h2>
+                                <p class="mx-2 nunito text-[.825rem] text-[#797979]">contactus@SCLOUDIN.in/ sales
+                                    @SCLOUDIN.in</p>
+                            </div>
                         </div>
-                        <div class="w-[90%] mx-auto flex flex-col md:flex-row items-start justify-start">
-                            <h2 class="text-[#000000] text-[1.2rem] font-[500] poppins">Contact -</h2>
-                            <p class="mx-2 nunito text-[.825rem] text-[#797979]">+91 9483078205/9342979716</p>
+                    </div>
+                    <div class="flex min-w-[90%] mx-auto justify-start items-center gap-[3rem]">
+                        <div
+                            class="bg-[#D9D9D9] flex justify-center items-center   h-[2.7vmax] w-[2.7vmax]  rounded-full">
+                            <button class="w-[2vmax] h-[2vmax] rounded-full blur-[2px] bg-[#F58A07]">
+                            </button>
                         </div>
-                        <div class="w-[90%] mx-auto flex flex-col md:flex-row items-start justify-start">
-                            <h2 class="text-[#000000] text-[1.2rem] font-[500] poppins">Email id - </h2>
-                            <p class="mx-2 nunito text-[.825rem] text-[#797979]">contactus@SCLOUDIN.in/ sales
-                                @SCLOUDIN.in</p>
+                        <h2 class="text-[#242331] text-[1.25rem] text-justify  md:text-[3rem] font-Nunito font-[600]">
+                            USA
+                        </h2>
+                    </div>
+                    <div class="flex min-w-[90%] mx-auto justify-start items-center gap-[3rem]">
+                        <div
+                            class="bg-[#D9D9D9] flex justify-center  items-center  h-[2.7vmax] w-[2.7vmax]  rounded-full">
+                            <button class="w-[2vmax] h-[2vmax] rounded-full blur-[2px] bg-[#39CA21]">
+                            </button>
                         </div>
+                        <h2 class="text-[#242331]  text-[1.25rem] text-justify  md:text-[3rem] font-Nunito font-[600]">
+                            UK
+                        </h2>
+                    </div>
+                    <div class="flex min-w-[90%] mx-auto justify-start items-center gap-[3rem]">
+                        <div
+                            class="bg-[#D9D9D9] flex justify-center items-center   h-[2.7vmax] w-[2.7vmax]  rounded-full">
+                            <button class="w-[2vmax] h-[2vmax] rounded-full blur-[2px] bg-[#E78697]">
+                            </button>
+                        </div>
+                        <h2 class="text-[#242331]  text-[1.25rem] text-justify  md:text-[3rem] font-Nunito font-[600]">
+                            Canada</h2>
                     </div>
                 </div>
-                <div class="flex min-w-[90%] mx-auto justify-start items-center gap-[3rem]">
-                    <div class="bg-[#D9D9D9] flex justify-center items-center   h-[2.7vmax] w-[2.7vmax]  rounded-full">
-                        <button class="w-[2vmax] h-[2vmax] rounded-full blur-[2px] bg-[#F58A07]">
-                        </button>
-                    </div>
-                    <h2 class="text-[#242331] text-[1.25rem] text-justify  md:text-[3rem] font-Nunito font-[600]">
-                        USA
-                    </h2>
-                </div>
-                <div class="flex min-w-[90%] mx-auto justify-start items-center gap-[3rem]">
-                    <div class="bg-[#D9D9D9] flex justify-center  items-center  h-[2.7vmax] w-[2.7vmax]  rounded-full">
-                        <button class="w-[2vmax] h-[2vmax] rounded-full blur-[2px] bg-[#39CA21]">
-                        </button>
-                    </div>
-                    <h2 class="text-[#242331]  text-[1.25rem] text-justify  md:text-[3rem] font-Nunito font-[600]">
-                        UK
-                    </h2>
-                </div>
-                <div class="flex min-w-[90%] mx-auto justify-start items-center gap-[3rem]">
-                    <div class="bg-[#D9D9D9] flex justify-center items-center   h-[2.7vmax] w-[2.7vmax]  rounded-full">
-                        <button class="w-[2vmax] h-[2vmax] rounded-full blur-[2px] bg-[#E78697]">
-                        </button>
-                    </div>
-                    <h2 class="text-[#242331]  text-[1.25rem] text-justify  md:text-[3rem] font-Nunito font-[600]">
-                        Canada</h2>
-                </div>
-            </div>
-        </section>
+            </section>
     </main>
-    <%- include('partials/footer')%>
+    <%-include('partials /footer')%>
 
         <script>
             AOS.init();
