@@ -30,7 +30,25 @@ app.set('view engine','ejs')
 app.set('views','views')
 app.use('/public',express.static('./public'))
 app.use('/assets',express.static('assets'));
-app.get('/', (req, res) => res.render('home'))
+
+app.get('/',async (req,res)=>
+{
+    try
+    {
+        const banner_data = await bannerModel.find()
+        const about_content = await aboutContentModel.findOne()
+        const product_data = await productcardModel.find()
+        const footer_data = await footerModel.findOne()
+       
+        res.render('home',{banner_data:banner_data,about_content:about_content,product_data,footer_data:footer_data})
+    }
+    catch(error)
+    {
+        console.log(error.message)
+    }
+})
+
+
 app.get("/careers",mainController.get_career_page)
 app.get("/your_career",mainController.get_single_career_page)
 app.get('/admin/admin_dashboard',adminauth.adminisLogin,(req,res)=>res.render('adminDashboard'))
@@ -313,6 +331,7 @@ app.post('/add_footer_content',async (req,res)=>{
 app.get('/get_footer_content',async (req,res)=>{
     try
     {
+        
         const footer_content = await footerModel.findOne()
         res.status(200).json(footer_content)
     }
