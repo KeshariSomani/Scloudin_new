@@ -3,12 +3,11 @@
 <!--Section 1-->   
  <section>
   <div class="slideshow-container">
-    <div class="mySlides fade">
-      <img src="../public/images/home_sec1_bg1.svg" style="width:100%">
-    </div>
-    <div class="mySlides fade">
-      <img src="../public/images/home_sec1_bg2.svg" style="width:95%" class="mx-12 mt-16">
-    </div>
+    <% banner_data.forEach(function(banner) { %>
+      <div class="mySlides fade">
+        <img src="/public/bannerImages/<%=banner.banner_image_url%>" style="width:95%" class="mx-12 mt-16">
+      </div>
+    <% }); %>
     <a class="prev" onclick="plusSlides(-1)">❮</a>
     <a class="next" onclick="plusSlides(1)">❯</a>
     </div>
@@ -32,9 +31,9 @@
 </div>
 <div class=" p-2 px-8 lg:px-0 lg:w-1/2 lg:ml-12  lg:mt-24">
     <p class="text-[#9747FF] text-lg font-semibold">About</p>
-    <p class="text-[#0B1C98] text-3xl font-bold nutino">Who We Are? </p>
+    <p class="text-[#0B1C98] text-3xl font-bold nutino"><%=about_content.about_heading%> </p>
 
-    <p class="text-[#37454D] text-xl pt-2"> We are a small young start up who builds everything around “ People & Technology ’’ We are agile software engineers , passionate for work life balance . We are skilled team of professionals in the field of software development . We use our passion for development to deliver the best software applications with the combination of technology know how ? and with great communication , we can create complete solutions for our clients. </p>
+    <p class="text-[#37454D] text-xl pt-2"> <%=about_content.about_description%> </p>
     
     <div class="md:flex flex-row justify-between mt-8 nutino">
         <div> <b class="text-4xl text-[#242331]">100</b> <b class="text-4xl  text-[#0B1C98]">M</b> 

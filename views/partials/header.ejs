@@ -337,7 +337,7 @@
       <span>
         <img src="../public/images/EnvelopeOpen.svg" alt="main" class="">
       </span>
-      <p>Email us at : contactus@SCLOUDIN.in</p>
+      <p>Email us at : <span id="header_email">contactus@SCLOUDIN.in</span></p>
     </div>
 
 
@@ -430,7 +430,18 @@
       btn.addEventListener("click", () => {
         menu.classList.toggle("hidden");
       });
+    
+    fetch(window.location.protocol +'//'+ window.location.host + '/get_header_email')
+      .then(response => response.json())
+      .then(data => {
+        // Process the data received from the API
 
+        document.getElementById('header_email').innerText = data.header_email
+      })
+      .catch(error => {
+        // Handle any errors that occurred during the request
+        console.error(error);
+      });
     </script>
   </nav>
 
