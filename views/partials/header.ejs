@@ -378,6 +378,27 @@
 .accordion__body.is-active {
 	display: block;
 }
+
+/* Navbar new dropdown*/
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 </style>
 
 <body>
@@ -423,13 +444,13 @@
         </div>
          
        </div>
-         <!---About-->
-         <div class="cursor-pointer  flex flex-col relative ">
-            <div class="flex items-center space-x-4 px-4 testfont_ " id="about_button">
+         <!---Home  About-->
+         <div class="cursor-pointer  flex flex-col relative dropdown">
+            <div class="flex items-center space-x-4 px-4 testfont_ ">
             <p class="text-lg text-[#0B1C98]">Home</p>
-            <img src="../public/images/navbar_arrow.svg" id="about_arrow">
+            <img src="../public/images/navbar_arrow.svg" id="aborrow">
             </div>
-            <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_" id="about_list">
+            <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content">
               <a href="">Company</a>
               <a href="">About Us</a>
               <a href="">What We Do</a>
@@ -442,12 +463,12 @@
          </div>
        
          <!--Technology-->
-         <div class="cursor-pointer testfont_ flex flex-col relative ">
+         <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
           <div class="flex items-center space-x-4 px-4 " id="tech_button">
           <p class="text-lg text-[#0B1C98]">Technology</p>
-          <img src="../public/images/navbar_arrow.svg" id="tech_arrow">
+          <img src="../public/images/navbar_arrow.svg" >
           </div>
-          <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_" id="tech_list">
+          <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content">
             <a href="">Why Scloudin</a>
             <a href="">Partnership</a>
             <a href="">Process</a>
@@ -456,12 +477,12 @@
        </div>
         
           <!--products-->
-          <div class="cursor-pointer testfont_ flex flex-col relative ">
-            <div class="flex items-center space-x-4 px-4 " id="product_button">
+          <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
+            <div class="flex items-center space-x-4 px-4 " >
             <p class="text-lg text-[#0B1C98]">Products</p>
-            <img src="../public/images/navbar_arrow.svg" id="product_arrow">
+            <img src="../public/images/navbar_arrow.svg">
             </div>
-            <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_" id="product_list">
+            <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content">
               <a href="">P-1</a>
               <a href="">P-2</a>
               <a href="">Process-3</a>
@@ -470,12 +491,12 @@
          </div>
           
          <!--services-->
-         <div class="cursor-pointer testfont_ flex flex-col relative ">
-          <div class="flex items-center space-x-4 px-4 " id="services_button">
+         <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
+          <div class="flex items-center space-x-4 px-4 ">
           <p class="text-lg text-[#0B1C98]">Services</p>
-          <img src="../public/images/navbar_arrow.svg" id="services_arrow">
+          <img src="../public/images/navbar_arrow.svg">
           </div>
-          <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_" id="services_list">
+          <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content" >
             <a href="">Ideation, POCs, MVPs</a>
             <a href="">UI UX Design</a>
             <a href="">Digital Marketing</a>
@@ -507,16 +528,30 @@
    
   <div class="lg:hidden bg-white" id="menubar">
     <div class=" flex flex-col px-10 space-y-2 hidden" id="menulist">
-        <a class="testfont_ text-lg text-[#0B1C98] cursor-pointer" href="/">Home</a>
-        <a class="testfont_ text-lg text-[#0B1C98] cursor-pointer" href="">About Us</a>
-        
+          <!---Home  About-->
+          <div class="cursor-pointer  flex flex-col relative dropdown">
+            <div class="flex items-center space-x-4 px-4 testfont_ ">
+            <p class="text-lg text-[#0B1C98]">Home</p>
+            <img src="../public/images/navbar_arrow.svg" id="aborrow">
+            </div>
+            <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content">
+              <a href="">Company</a>
+              <a href="">About Us</a>
+              <a href="">What We Do</a>
+              <a href="">Our Mission</a>
+              <a href="">Our Values</a>
+              <a href="">Our Focus</a>
+              <a href="">Careers</a>
+              <a href="">Blogs & News</a>
+            </div>
+         </div> 
         <!--Technology-->
-        <div class="cursor-pointer testfont_ flex flex-col relative ">
-          <div class="flex items-center space-x-4 " id="tech_mobbutton">
+        <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
+          <div class="flex items-center space-x-4 ">
           <p class="text-lg text-[#0B1C98]">Technology</p>
-          <img src="../public/images/navbar_arrow.svg" id="tech_mobarrow">
+          <img src="../public/images/navbar_arrow.svg">
           </div>
-          <div class=" flex-col absolute top-6 bg-white text-lg w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_" id="tech_moblist">
+          <div class=" flex-col absolute top-6 bg-white text-lg w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content" >
             <a href="">Why Scloudin</a>
             <a href="">Partnership</a>
             <a href="">Process</a>
@@ -525,12 +560,12 @@
        </div>
 
        <!--Products-->
-       <div class="cursor-pointer testfont_ flex flex-col relative ">
-        <div class="flex items-center space-x-4  " id="pro_mobbutton">
+       <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
+        <div class="flex items-center space-x-4  " >
         <p class="text-lg text-[#0B1C98]">Products</p>
-        <img src="../public/images/navbar_arrow.svg" id="pro_mobarrow">
+        <img src="../public/images/navbar_arrow.svg" >
         </div>
-        <div class=" flex-col absolute top-6 bg-white text-lg w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_" id="pro_moblist">
+        <div class=" flex-col absolute top-6 bg-white text-lg w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content" >
           <a href="">Why Scloudin</a>
           <a href="">Partnership</a>
           <a href="">Process</a>
@@ -538,12 +573,12 @@
          </div>
      </div>
      <!--services-->
-     <div class="cursor-pointer testfont_ flex flex-col relative ">
-      <div class="flex items-center space-x-4" id="services_mobbutton">
+     <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
+      <div class="flex items-center space-x-4">
       <p class="text-lg text-[#0B1C98] testfont_">Services</p>
-      <img src="../public/images/navbar_arrow.svg" id="services_mobarrow">
+      <img src="../public/images/navbar_arrow.svg">
       </div>
-      <div class=" flex-col absolute top-6 bg-white text-lg w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_" id="services_moblist">
+      <div class=" flex-col absolute top-6 bg-white text-lg w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content">
         <a href="">Why Scloudin</a>
         <a href="">Partnership</a>
         <a href="">Process</a>
@@ -552,25 +587,7 @@
    </div>
         <a class="testfont_ text-[#0B1C98] text-lg cursor-pointer" href="/online_course">Careers</a>
         
-        <div class="cursor-pointer  font-bold font-roboto flex flex-col relative ">
-         
-          <div class="flex flex-col absolute top-6 bg-white w-56 p-2 space-y-5 shadow-xl border-1 border-gray-100 hidden z-50 h-[20rem] overflow-y-scroll" id="mobmorelist">
-            <a class="font-bold text-lg cursor-pointer" href="/answer_key">Download Answers</a>
-              <a class="font-bold text-lg cursor-pointer" href="/skill_development">Skill Courses</a>
-              <p>Competitive Exam Details</p>
-              <div class=" flex flex-col space-y-2 pl-4 text-gray-500">
-              <a href="/jee_main_exam">JEE Main Entrance Exam</a>
-              <a href="/jee_advance_exam" >JEE Advance Entrance Exam</a>
-              <a href="/neet_exam">NEET Entrance Exam </a>
-              <a href="/ntse_exam">NTSE Exam</a>
-              <a href="/mvpp_exam">MVPP</a>
-              <a href="/cuet_exam">CUET</a>
-              <a href="/nda_exam">NDA Entrance Exam</a>
-            </div>
-            <p><a href="/contact">Contact</a></p>
-            <p><a href="/about">About Us</a></p>
-           </div>
-           </div>
+       
        </div>
      </div>
   </div>
@@ -606,99 +623,7 @@
          }
          
      })
-     //Home
-     document.getElementById('homebutton').addEventListener('click',()=>
-     {
-       const courselist = document.getElementById('homelist')
-       var course_object = getComputedStyle(courselist);
-       if(course_object.display=='none')
-       {
-         courselist.style.display='flex'
-         document.getElementById('homearrow').style.rotate='180deg'
-       }
-       else
-       {
-         courselist.style.display='none'
-         document.getElementById('homearrow').style.rotate='360deg'
-
-       }
-     })
-     //ABout
-      document.getElementById('about_button').addEventListener('click',()=>
-      {
-        const courselist = document.getElementById('about_list')
-        var course_object = getComputedStyle(courselist);
-        if(course_object.display=='none')
-        {
-          courselist.style.display='flex'
-          document.getElementById('about_arrow').style.rotate='180deg'
-        }
-        else
-        {
-          courselist.style.display='none'
-          document.getElementById('about_arrow').style.rotate='360deg'
-
-        }
-      })
-
-      //Tech
-     document.getElementById('tech_button').addEventListener('click',()=>
-     {
-       const courselist = document.getElementById('tech_list')
-       var course_object = getComputedStyle(courselist);
-       if(course_object.display=='none')
-       {
-         courselist.style.display='flex'
-         document.getElementById('tech_arrow').style.rotate='180deg'
-       }
-       else
-       {
-         courselist.style.display='none'
-         document.getElementById('tech_arrow').style.rotate='360deg'
-
-       }
-     })
-      //Product
-      document.getElementById('product_button').addEventListener('click',()=>
-      {
-        const courselist = document.getElementById('product_list')
-        var course_object = getComputedStyle(courselist);
-        if(course_object.display=='none')
-        {
-          courselist.style.display='flex'
-          document.getElementById('product_arrow').style.rotate='180deg'
-        }
-        else
-        {
-          courselist.style.display='none'
-          document.getElementById('product_arrow').style.rotate='360deg'
- 
-        }
-      })
-       //Services
-     document.getElementById('services_button').addEventListener('click',()=>
-     {
-       const courselist = document.getElementById('services_list')
-       var course_object = getComputedStyle(courselist);
-       if(course_object.display=='none')
-       {
-         courselist.style.display='flex'
-         document.getElementById('services_arrow').style.rotate='180deg'
-       }
-       else
-       {
-         courselist.style.display='none'
-         document.getElementById('services_arrow').style.rotate='360deg'
-
-       }
-     })
-
-
-
-
-
-     
-
+   
       document.getElementById('morebutton').addEventListener('click',()=>
       {
         const courselist = document.getElementById('morelist')
