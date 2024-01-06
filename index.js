@@ -38,9 +38,8 @@ app.get('/',async (req,res)=>
         const banner_data = await bannerModel.find()
         const about_content = await aboutContentModel.findOne()
         const product_data = await productcardModel.find()
-        const footer_data = await footerModel.findOne()
        
-        res.render('home',{banner_data:banner_data,about_content:about_content,product_data,footer_data:footer_data})
+        res.render('home',{banner_data:banner_data,about_content:about_content,product_data})
     }
     catch(error)
     {
@@ -57,8 +56,15 @@ app.get('/admin/delete_job',adminauth.adminisLogin,mainController.delete_job)
 app.post('/admin/add_job',adminauth.adminisLogin,mainController.add_jobs)
 app.get('/admin/add_blog',adminauth.adminisLogin,mainController.get_add_blog_page)
 app.get('/admin/adminHome',mainController.get_manage_home_page)
+
 app.get('/about',(req,res)=>res.render('about'))
+
+
+
 app.get('/contact',(req,res)=>res.render('contact'))
+
+
+
 app.get('/hireus',(req,res)=>res.render('hireus'))
 app.get('/services',(req,res)=>res.render('services'))
 app.get('/technology',(req,res)=>res.render('technology'))
@@ -354,6 +360,16 @@ app.post('/update_footer_content',async (req,res)=>{
     }
 
 })
+
+// Test Api 
+
+app.get('/route_name' , async (req,res)=>
+{
+    res.render('file_name')
+})
+
+
+
 
 
 

@@ -2,27 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home_Scloudin</title>
-  <!--Font Link -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter&family=K2D:wght@300&family=Open+Sans&family=Poppins:wght@300;600&family=Roboto:wght@700&display=swap"
-    rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=MuseoModerno' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito:wght@800&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home_Scloudin</title>
+    <!--Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=K2D:wght@300&family=Open+Sans&family=Poppins:wght@300;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=MuseoModerno' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito:wght@800&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!--Navbarr-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!--tailwind cdn link-->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+ 
 </head>
 <style>
   .testfont_ {
@@ -38,37 +42,15 @@
     font-weight: 700px;
     line-height: 22px;
   }
-
-
-
-  /* navbar styling */
-
-  .navbar {
-
-    overflow: hidden;
+/*SK Navbar*/
+  #menubar
+  {
+      height: 10px;
+      transition: all ease-in-out;
+      transition-duration: 0.5s;
+      transition-timing-function: linear;
+      transition-delay: 1s;
   }
-
-  .navbar .company-name {
-    float: left;
-    padding: 10px 20px;
-    color: #9747FF;
-    text-decoration: none;
-    font-size: 20px;
-  }
-
-
-  .navbar .nav-links {
-    float: right;
-    padding: 10px 20px;
-  }
-
-
-  .navbar .nav-links a {
-    color: #9747FF;
-    text-decoration: none;
-    margin: 0 10px;
-  }
-
   /* navbar styling */
 
   .section1 {
@@ -85,12 +67,11 @@
   .poppins {
     font-family: 'Poppins';
   }
-
-  .open {
+  
+  .open{
     font-family: 'Open Sans', sans-serif;
 
   }
-
   .nutino {
     font-family: 'Nunito';
   }
@@ -256,7 +237,7 @@
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: black;
+  color: #bdd8ef;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -267,9 +248,16 @@
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 50%;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
+.prev {
+  border-radius: 50%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: #0B1C98;
@@ -328,16 +316,99 @@
   .prev, .next,.text {font-size: 11px}
 }
 /*banner end */
+
+/*accordion header*/
+.accordion__header {
+	padding: 1em;
+
+	margin-top: 2px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+}
+.accordion__header > * {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 16px;
+}
+.accordion__header.is-active {
+
+	color: black;
+}
+
+.accordion__toggle {
+	margin-left: 10px;
+	height: 3px;
+	background-color: #222;
+	width: 13px;
+	display: block;
+	position: relative;
+	flex-shrink: 1;
+	border-radius: 2px;
+}
+
+.accordion__toggle::before {
+	content: "";
+	width: 3px;
+	height: 13px;
+	display: block;
+	background-color: #222;
+	position: absolute;
+	top: -5px;
+	left: 5px;
+	border-radius: 2px;
+}
+.is-active{
+    border: none;
+}
+
+.is-active .accordion__toggle {
+	background-color: black;
+}
+.is-active .accordion__toggle::before {
+	display: none;
+}
+
+
+.accordion__body {
+	display: none;
+	padding: 1em;
+}
+.accordion__body.is-active {
+	display: block;
+}
+
+/* Navbar new dropdown*/
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 </style>
 
 <body>
 
-  <div id="fadeshow1" class=" bg-[#0B1C98] text-white h-[61px] px-4 flex justify-between">
+  <div id="fadeshow1" class=" bg-[#0B1C98] text-white h-12 px-4 flex justify-between">
     <div class="flex items-center gap-2">
       <span>
         <img src="../public/images/EnvelopeOpen.svg" alt="main" class="">
       </span>
-      <p>Email us at : <span id="header_email">contactus@SCLOUDIN.in</span></p>
+      <p class="text-md">Email us at : contactus@SCLOUDIN.in</p>
     </div>
 
 
@@ -347,7 +418,7 @@
       <img src="../public/images/Vector (2).svg" alt="main" class="">
       <p class="h-[39px] w-[1px] bg-white "></p>
       <img src="../public/images/Phone.svg" alt="main" class="">
-      <p class="testfont_">9843078205</p>
+      <p class="testfont_">+91-9843078205</p>
     </div>
   </div>
 
@@ -357,49 +428,105 @@
 
 
   <!-- Navbar goes here -->
-  <nav class="bg-white shadow-lg">
-    <div class="max-w-[95rem] lg:px-6 ">
-      <div class="flex justify-between lg:">
-
-        <div class="">
-          <!-- Website Logo -->
-          <a href="#" class="flex items-center py-4 px-2">
-            <img src="../public/images/3 1.svg" alt="Logo" class=" ">
-          </a>
-        </div>
-        <!-- Primary Navbar items -->
-        <div class="hidden md:flex items-center space-x-1 gap-4 uppercase">
-          <a href="/" class="py-4 px-2 text-[#9747FF] font-bold ">Home</a>
-          <a href="/about" class="py-4 px-2 text-[#9747FF]  hover:font-semibold transition duration-300">About Us </a>
-          <a href="/about" class="py-4 px-2 text-[#9747FF]  hover:font-semibold transition duration-300">Why
-            Scloudin</a>
-          <a href="/technology"
-            class="py-4 px-2 text-[#9747FF]  hover:font-semibold transition duration-300">Technology</a>
-          <a href="/products" class="py-4 px-2 text-[#9747FF]  hover:font-semibold transition duration-300">Products</a>
-          <a href="/services" class="py-4 px-2 text-[#9747FF]  hover:font-semibold transition duration-300">services</a>
-          <a href="/careers" class="py-4 px-2 text-[#9747FF]  hover:font-semibold transition duration-300">careers</a>
-          <a href="/contact" class="py-4 px-2 text-[#9747FF]  hover:font-semibold transition duration-300">Contact
-            Us</a>
-          <a href="/blogs" class="py-4 px-2 text-[#9747FF]  hover:font-semibold transition duration-300">Blogs</a>
-
-        </div>
-
-
-        <!-- Mobile menu button -->
-        <div class="md:hidden flex items-center">
-          <button class="outline-none mobile-menu-button px-4 ">
-            <svg class=" w-8 h-8 text-[#0B1C98] hover:font-semibold  " x-show="!showMenu" fill="none"
-              stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-              <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
+  <nav class="z-50 ">
+        
+    <div class=" lg:h-[6.25rem] h-fit  bg-white flex items-center flex-1 lg:justify-between lg:mx-12 justify-between p-3 lg:p-0">
+      <div>
+        <a href="/">
+       <img src="../public/images/logo.svg" class="h-10 lg:h-auto cursor-pointer ">
+      </a>
       </div>
+      <div class=" space-x-8 font-roboto hidden lg:flex">
+        <!--Home-->
+        <div class="cursor-pointer   flex flex-col relative ">
+          <div class="flex items-center space-x-2 pt-2 px-4" id="homebutton">
+          <img src="../public/images/Home_Icon.svg" alt="">
+        </div>
+         
+       </div>
+         <!---Home  About-->
+         <div class="cursor-pointer  flex flex-col relative dropdown">
+            <div class="flex items-center space-x-4 px-4 testfont_ ">
+            <p class="text-lg text-[#0B1C98]">Home</p>
+            <img src="../public/images/navbar_arrow.svg" id="aborrow">
+            </div>
+            <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content">
+              <a href="">Company</a>
+              <a href="">About Us</a>
+              <a href="">What We Do</a>
+              <a href="">Our Mission</a>
+              <a href="">Our Values</a>
+              <a href="">Our Focus</a>
+              <a href="">Careers</a>
+              <a href="">Blogs & News</a>
+            </div>
+         </div>
+       
+         <!--Technology-->
+         <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
+          <div class="flex items-center space-x-4 px-4 " id="tech_button">
+          <p class="text-lg text-[#0B1C98]">Technology</p>
+          <img src="../public/images/navbar_arrow.svg" >
+          </div>
+          <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content">
+            <a href="">Why Scloudin</a>
+            <a href="">Partnership</a>
+            <a href="">Process</a>
+            <a href="">Business Model</a>
+           </div>
+       </div>
+        
+          <!--products-->
+          <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
+            <div class="flex items-center space-x-4 px-4 " >
+            <p class="text-lg text-[#0B1C98]">Products</p>
+            <img src="../public/images/navbar_arrow.svg">
+            </div>
+            <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content">
+              <a href="">P-1</a>
+              <a href="">P-2</a>
+              <a href="">Process-3</a>
+              <a href="">Model P-4</a>
+             </div>
+         </div>
+          
+         <!--services-->
+         <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
+          <div class="flex items-center space-x-4 px-4 ">
+          <p class="text-lg text-[#0B1C98]">Services</p>
+          <img src="../public/images/navbar_arrow.svg">
+          </div>
+          <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content" >
+            <a href="">Ideation, POCs, MVPs</a>
+            <a href="">UI UX Design</a>
+            <a href="">Digital Marketing</a>
+            <a href="">Graphic Design</a>
+            <a href="">Mobile App Development</a>
+            <a href="">Web App Development</a>
+            <a href="">Hire Us</a>
+           </div>
+       </div>
+
+       <a class="testfont_ text-lg text-[#0B1C98] cursor-pointer" href="">Careers</a>
+      </div>
+      
+  
+       <!-- HamBurger Icon  -->
+       <div class="relative py-1 sm:max-w-xl  w-fit lg:hidden flex " id="hamburger">
+        <nav x-data="{ open: false }">
+            <button class="text-gray-500 w-10 h-10 relative focus:outline-none bg-white" @click="open = !open">
+                <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+                    <span aria-hidden="true" class="block absolute  h-0.5 w-7 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                    <span aria-hidden="true" class="block absolute  h-0.5 w-7 bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
+                    <span aria-hidden="true" class="block absolute  h-0.5 w-7 bg-current transform  transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                </div>
+            </button>
+        </nav>
     </div>
     <!-- mobile menu -->
     <div class="hidden mobile-menu">
       <ul class="">
-        <li class="active"><a href="/"
+        <li class="active"><a href="index.html"
             class="block text-sm px-2 py-4 text-white bg-[#9747FF] font-semibold">Home</a></li>
         <li><a href="/"
             class="block text-sm  px-2 py-4 hover:bg-[#9747FF] hover:text-white transition duration-300">About Us</a>
@@ -422,27 +549,162 @@
 
       </ul>
     </div>
-    <script>
+   
+  <div class="lg:hidden bg-white" id="menubar">
+    <div class=" flex flex-col px-10 space-y-2 hidden" id="menulist">
+          <!---Home  About-->
+          <div class="cursor-pointer  flex flex-col relative dropdown">
+            <div class="flex items-center space-x-4 px-4 testfont_ ">
+            <p class="text-lg text-[#0B1C98]">Home</p>
+            <img src="../public/images/navbar_arrow.svg" id="aborrow">
+            </div>
+            <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content">
+              <a href="">Company</a>
+              <a href="">About Us</a>
+              <a href="">What We Do</a>
+              <a href="">Our Mission</a>
+              <a href="">Our Values</a>
+              <a href="">Our Focus</a>
+              <a href="">Careers</a>
+              <a href="">Blogs & News</a>
+            </div>
+         </div> 
+        <!--Technology-->
+        <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
+          <div class="flex items-center space-x-4 ">
+          <p class="text-lg text-[#0B1C98]">Technology</p>
+          <img src="../public/images/navbar_arrow.svg">
+          </div>
+          <div class=" flex-col absolute top-6 bg-white text-lg w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content" >
+            <a href="">Why Scloudin</a>
+            <a href="">Partnership</a>
+            <a href="">Process</a>
+            <a href="">Business Model</a>
+           </div>
+       </div>
 
-      const btn = document.querySelector("button.mobile-menu-button");
-      const menu = document.querySelector(".mobile-menu");
-
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-    
-    fetch(window.location.protocol +'//'+ window.location.host + '/get_header_email')
-      .then(response => response.json())
-      .then(data => {
-        // Process the data received from the API
-
-        document.getElementById('header_email').innerText = data.header_email
-      })
-      .catch(error => {
-        // Handle any errors that occurred during the request
-        console.error(error);
-      });
-    </script>
-  </nav>
+       <!--Products-->
+       <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
+        <div class="flex items-center space-x-4  " >
+        <p class="text-lg text-[#0B1C98]">Products</p>
+        <img src="../public/images/navbar_arrow.svg" >
+        </div>
+        <div class=" flex-col absolute top-6 bg-white text-lg w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content" >
+          <a href="">Why Scloudin</a>
+          <a href="">Partnership</a>
+          <a href="">Process</a>
+          <a href="">Business Model</a>
+         </div>
+     </div>
+     <!--services-->
+     <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
+      <div class="flex items-center space-x-4">
+      <p class="text-lg text-[#0B1C98] testfont_">Services</p>
+      <img src="../public/images/navbar_arrow.svg">
+      </div>
+      <div class=" flex-col absolute top-6 bg-white text-lg w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content">
+        <a href="">Why Scloudin</a>
+        <a href="">Partnership</a>
+        <a href="">Process</a>
+        <a href="">Business Model</a>
+       </div>
+   </div>
+        <a class="testfont_ text-[#0B1C98] text-lg cursor-pointer" href="/online_course">Careers</a>
+        
+       
+       </div>
+     </div>
+  </div>
+   
+</nav>
 
   <!-- header section -->
+
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <script>
+      var menuflag = true;
+     document.getElementById('hamburger').addEventListener('click',()=>
+     {
+         if(menuflag==true)
+         {
+                  document.getElementById('menubar').style.height='15rem'
+              let menulist = document.getElementById('menulist')
+              setTimeout(()=>
+              {
+                  menulist.style.display='flex'
+              },600)
+              menuflag=false
+         }
+         else
+         {
+          document.getElementById('menubar').style.height='0rem'
+              let menulist = document.getElementById('menulist')
+              setTimeout(()=>
+              {
+                  menulist.style.display='none'
+              },100)
+              menuflag=true 
+         }
+         
+     })
+   
+      document.getElementById('morebutton').addEventListener('click',()=>
+      {
+        const courselist = document.getElementById('morelist')
+        var course_object = getComputedStyle(courselist);
+        if(course_object.display=='none')
+        {
+          courselist.style.display='flex'
+          document.getElementById('morearrow').style.rotate='180deg'
+        }
+        else
+        {
+          courselist.style.display='none'
+          document.getElementById('morearrow').style.rotate='360deg'
+
+        }
+      })
+      
+      document.getElementById('tech_mobbutton').addEventListener('click',()=>
+      {
+        const courselist = document.getElementById('tech_moblist')
+        var course_object = getComputedStyle(courselist);
+        if(course_object.display=='none')
+        {
+          courselist.style.display='flex'
+          document.getElementById('tech_mobbutton').style.rotate='180deg'
+        }
+        else
+        {
+          courselist.style.display='none'
+          document.getElementById('tech_mobbutton').style.rotate='360deg'
+
+        }
+      })
+
+      document.getElementById('mobmorebutton').addEventListener('click',()=>
+      {
+        const courselist = document.getElementById('mobmorelist')
+        var course_object = getComputedStyle(courselist);
+        if(course_object.display=='none')
+        {
+          courselist.style.display='flex'
+          document.getElementById('mobmorearrow').style.rotate='180deg'
+        }
+        else
+        {
+          courselist.style.display='none'
+          document.getElementById('mobmorearrow').style.rotate='360deg'
+
+        }
+      })
+                      $(document).ready(function(){
+              $("#user_button").click(function(){
+                  $("#logout_button").toggle();
+              });
+              });
+    
+  </script>
+
+  
+  
