@@ -2,22 +2,20 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home_Scloudin</title>
-  <!--Font Link -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter&family=K2D:wght@300&family=Open+Sans&family=Poppins:wght@300;600&family=Roboto:wght@700&display=swap"
-    rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=MuseoModerno' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito:wght@800&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home_Scloudin</title>
+    <!--Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=K2D:wght@300&family=Open+Sans&family=Poppins:wght@300;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=MuseoModerno' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito:wght@800&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <!--Navbarr-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -44,33 +42,14 @@
     font-weight: 700px;
     line-height: 22px;
   }
-
-  /* navbar styling */
-
-  .navbar {
-
-    overflow: hidden;
-  }
-
-  .navbar .company-name {
-    float: left;
-    padding: 10px 20px;
-    color: #9747FF;
-    text-decoration: none;
-    font-size: 20px;
-  }
-
-
-  .navbar .nav-links {
-    float: right;
-    padding: 10px 20px;
-  }
-
-
-  .navbar .nav-links a {
-    color: #9747FF;
-    text-decoration: none;
-    margin: 0 10px;
+/*SK Navbar*/
+  #menubar
+  {
+      height: 10px;
+      transition: all ease-in-out;
+      transition-duration: 0.5s;
+      transition-timing-function: linear;
+      transition-delay: 1s;
   }
   /* navbar styling */
 
@@ -88,12 +67,11 @@
   .poppins {
     font-family: 'Poppins';
   }
-
-  .open {
+  
+  .open{
     font-family: 'Open Sans', sans-serif;
 
   }
-
   .nutino {
     font-family: 'Nunito';
   }
@@ -409,7 +387,7 @@
       <span>
         <img src="../public/images/EnvelopeOpen.svg" alt="main" class="">
       </span>
-      <p>Email us at : contactus@SCLOUDIN.in</p>
+      <p class="text-md">Email us at : contactus@SCLOUDIN.in</p>
     </div>
 
 
@@ -526,17 +504,78 @@
     </div>
    <!-- HamBurger Icon  -->
     </div>
-    <script>
+   
+  <div class="lg:hidden bg-white" id="menubar">
+    <div class=" flex flex-col px-10 space-y-2 hidden" id="menulist">
+        <a class="testfont_ text-lg text-[#0B1C98] cursor-pointer" href="/">Home</a>
+        <a class="testfont_ text-lg text-[#0B1C98] cursor-pointer" href="">About Us</a>
+        
+        <!--Technology-->
+        <div class="cursor-pointer testfont_ flex flex-col relative ">
+          <div class="flex items-center space-x-4 " id="tech_mobbutton">
+          <p class="text-lg text-[#0B1C98]">Technology</p>
+          <img src="../public/images/navbar_arrow.svg" id="tech_mobarrow">
+          </div>
+          <div class=" flex-col absolute top-6 bg-white text-lg w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_" id="tech_moblist">
+            <a href="">Why Scloudin</a>
+            <a href="">Partnership</a>
+            <a href="">Process</a>
+            <a href="">Business Model</a>
+           </div>
+       </div>
 
-      const btn = document.querySelector("button.mobile-menu-button");
-      const menu = document.querySelector(".mobile-menu");
-
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-
-    </script>
-  </nav>
+       <!--Products-->
+       <div class="cursor-pointer testfont_ flex flex-col relative ">
+        <div class="flex items-center space-x-4  " id="pro_mobbutton">
+        <p class="text-lg text-[#0B1C98]">Products</p>
+        <img src="../public/images/navbar_arrow.svg" id="pro_mobarrow">
+        </div>
+        <div class=" flex-col absolute top-6 bg-white text-lg w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_" id="pro_moblist">
+          <a href="">Why Scloudin</a>
+          <a href="">Partnership</a>
+          <a href="">Process</a>
+          <a href="">Business Model</a>
+         </div>
+     </div>
+     <!--services-->
+     <div class="cursor-pointer testfont_ flex flex-col relative ">
+      <div class="flex items-center space-x-4" id="services_mobbutton">
+      <p class="text-lg text-[#0B1C98] testfont_">Services</p>
+      <img src="../public/images/navbar_arrow.svg" id="services_mobarrow">
+      </div>
+      <div class=" flex-col absolute top-6 bg-white text-lg w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_" id="services_moblist">
+        <a href="">Why Scloudin</a>
+        <a href="">Partnership</a>
+        <a href="">Process</a>
+        <a href="">Business Model</a>
+       </div>
+   </div>
+        <a class="testfont_ text-[#0B1C98] text-lg cursor-pointer" href="/online_course">Careers</a>
+        
+        <div class="cursor-pointer  font-bold font-roboto flex flex-col relative ">
+         
+          <div class="flex flex-col absolute top-6 bg-white w-56 p-2 space-y-5 shadow-xl border-1 border-gray-100 hidden z-50 h-[20rem] overflow-y-scroll" id="mobmorelist">
+            <a class="font-bold text-lg cursor-pointer" href="/answer_key">Download Answers</a>
+              <a class="font-bold text-lg cursor-pointer" href="/skill_development">Skill Courses</a>
+              <p>Competitive Exam Details</p>
+              <div class=" flex flex-col space-y-2 pl-4 text-gray-500">
+              <a href="/jee_main_exam">JEE Main Entrance Exam</a>
+              <a href="/jee_advance_exam" >JEE Advance Entrance Exam</a>
+              <a href="/neet_exam">NEET Entrance Exam </a>
+              <a href="/ntse_exam">NTSE Exam</a>
+              <a href="/mvpp_exam">MVPP</a>
+              <a href="/cuet_exam">CUET</a>
+              <a href="/nda_exam">NDA Entrance Exam</a>
+            </div>
+            <p><a href="/contact">Contact</a></p>
+            <p><a href="/about">About Us</a></p>
+           </div>
+           </div>
+       </div>
+     </div>
+  </div>
+   
+</nav>
 
   <!-- header section -->
 
