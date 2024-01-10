@@ -385,7 +385,7 @@
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0 #1565C0;
   z-index: 1;
 }
 .dropdown-content a {
@@ -408,7 +408,7 @@
       <span>
         <img src="../public/images/EnvelopeOpen.svg" alt="main" class="">
       </span>
-      <p class="text-md">Email us at : contactus@SCLOUDIN.in</p>
+      <span class="text-md">Email us at : contactus@SCLOUDIN.in</>
     </div>
 
 
@@ -418,7 +418,7 @@
       <img src="../public/images/Vector (2).svg" alt="main" class="">
       <p class="h-[39px] w-[1px] bg-white "></p>
       <img src="../public/images/Phone.svg" alt="main" class="">
-      <p class="testfont_">+91-9843078205</p>
+      <span class="testfont_">+91-9843078205</span>
     </div>
   </div>
 
@@ -440,74 +440,66 @@
         <!--Home-->
         <div class="cursor-pointer   flex flex-col relative ">
           <div class="flex items-center space-x-2 pt-2 px-4" id="homebutton">
-          <img src="../public/images/Home_Icon.svg" alt="">
+        <a href="/"> <img src="../public/images/Home_Icon.svg" alt=""> </a> 
         </div>
          
        </div>
          <!---Home  About-->
-         <div class="cursor-pointer  flex flex-col relative dropdown">
+         <div class="flex">
+         <div class="cursor-pointer  flex flex-col relative dropdown ">
             <div class="flex items-center space-x-4 px-4 testfont_ ">
-            <p class="text-lg text-[#0B1C98]">Home</p>
+         <a href="/">  <p class="text-lg text-[#0B1C98]">Home</p> </a> 
             <img src="../public/images/navbar_arrow.svg" id="aborrow">
             </div>
-            <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content">
-              <a href="">Company</a>
-              <a href="">About Us</a>
-              <a href="">What We Do</a>
-              <a href="">Our Mission</a>
-              <a href="">Our Values</a>
-              <a href="">Our Focus</a>
-              <a href="">Careers</a>
-              <a href="">Blogs & News</a>
+            <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-2xl  hover:shadow-blue-800 border-1 border-gray-100 hidden z-50 testfont_ dropdown-content">
+              <a href="#home_company" class="hover:underline hover:decoration-blue-700 hover:underline-offset-4">Company</a>
+              <a href="/about"class="hover:underline hover:decoration-blue-700 hover:underline-offset-4">About Us</a>
+              <a href="#what_we_do"class="hover:underline hover:decoration-blue-700 hover:underline-offset-4">What We Do</a>
+              <a href="#our_mission"class="hover:underline hover:decoration-blue-700 hover:underline-offset-4">Our Mission</a>
+              <a href="#our_values"class="hover:underline hover:decoration-blue-700 hover:underline-offset-4">Our Values</a>
+              <a href="#our_focus"class="hover:underline hover:decoration-blue-700 hover:underline-offset-4">Our Focus</a>
+              <a href="/blogs"class="hover:underline hover:decoration-blue-700 hover:underline-offset-4">Blogs & News</a>
             </div>
          </div>
-       
+        </div>
          <!--Technology-->
          <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
           <div class="flex items-center space-x-4 px-4 " id="tech_button">
-          <p class="text-lg text-[#0B1C98]">Technology</p>
+         <a href="/technology"><p class="text-lg text-[#0B1C98]">Technology</p></a> 
           <img src="../public/images/navbar_arrow.svg" >
           </div>
-          <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content">
-            <a href="">Why Scloudin</a>
-            <a href="">Partnership</a>
-            <a href="">Process</a>
-            <a href="">Business Model</a>
+          <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 hover:shadow-blue-800  border-gray-100 hidden z-50 testfont_ dropdown-content">
+            <a href="#why_scloudin"class="hover:underline hover:decoration-blue-700 hover:underline-offset-4">Why Scloudin</a>
+            <a href="#partnership"class="hover:underline hover:decoration-blue-700 hover:underline-offset-4">Partnership</a>
+            <a href="#process"class="hover:underline hover:decoration-blue-700 hover:underline-offset-4">Process</a>
+            <a href="#business_model"class="hover:underline hover:decoration-blue-700 hover:underline-offset-4">Business Model</a>
            </div>
        </div>
         
           <!--products-->
           <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
             <div class="flex items-center space-x-4 px-4 " >
-            <p class="text-lg text-[#0B1C98]">Products</p>
-            <img src="../public/images/navbar_arrow.svg">
+           <a href="/products"> <p class="text-lg text-[#0B1C98]">Products</p></a>
             </div>
-            <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content">
-              <a href="">P-1</a>
-              <a href="">P-2</a>
-              <a href="">Process-3</a>
-              <a href="">Model P-4</a>
-             </div>
          </div>
           
          <!--services-->
          <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
           <div class="flex items-center space-x-4 px-4 ">
-          <p class="text-lg text-[#0B1C98]">Services</p>
+         <a href="/services"><p class="text-lg text-[#0B1C98]">Services</p></a> 
           <img src="../public/images/navbar_arrow.svg">
           </div>
-          <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content" >
-            <a href="">Ideation, POCs, MVPs</a>
-            <a href="">UI UX Design</a>
-            <a href="">Digital Marketing</a>
-            <a href="">Graphic Design</a>
-            <a href="">Mobile App Development</a>
-            <a href="">Web App Development</a>
-            <a href="">Hire Us</a>
+          <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 hover:shadow-blue-800 border-gray-100 hidden z-50 testfont_ dropdown-content" >
+            <a href="" class="hover:underline hover:decoration-blue-700 hover:underline-offset-4">Ideation, POCs, MVPs</a>
+            <a href="" class="hover:underline hover:decoration-blue-700 hover:underline-offset-4">UI UX Design</a>
+            <a href="" class="hover:underline hover:decoration-blue-700 hover:underline-offset-4">Digital Marketing</a>
+            <a href="" class="hover:underline hover:decoration-blue-700 hover:underline-offset-4">Graphic Design</a>
+            <a href="" class="hover:underline hover:decoration-blue-700 hover:underline-offset-4">Mobile App Development</a>
+            <a href="" class="hover:underline hover:decoration-blue-700 hover:underline-offset-4">Web App Development</a>
            </div>
        </div>
-
-       <a class="testfont_ text-lg text-[#0B1C98] cursor-pointer" href="">Careers</a>
+       <a class="testfont_ text-lg text-[#0B1C98] cursor-pointer" href="/careers">Hire Us</a>
+       <a class="testfont_ text-lg text-[#0B1C98] cursor-pointer" href="/careers">Careers</a>
       </div>
       
   
@@ -540,8 +532,6 @@
         </li>
         <li><a href="/services" class="block text-sm  px-2 py-4 hover:bg-[#9747FF] transition duration-300">Services</a>
         </li>
-        <li><a href="/careers" class="block text-sm  px-2 py-4 hover:bg-[#9747FF] transition duration-300">Careers</a>
-        </li>
         <li><a href="/contact" class="block text-sm  px-2 py-4 hover:bg-[#9747FF] transition duration-300">Contact
             Us</a>
         </li>
@@ -555,7 +545,7 @@
           <!---Home  About-->
           <div class="cursor-pointer  flex flex-col relative dropdown">
             <div class="flex items-center space-x-4 px-4 testfont_ ">
-            <p class="text-lg text-[#0B1C98]">Home</p>
+          <a href="/">  <p class="text-lg text-[#0B1C98]">Home</p> </a>
             <img src="../public/images/navbar_arrow.svg" id="aborrow">
             </div>
             <div class=" flex-col absolute top-6 bg-white text-md w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content">
@@ -565,14 +555,13 @@
               <a href="">Our Mission</a>
               <a href="">Our Values</a>
               <a href="">Our Focus</a>
-              <a href="">Careers</a>
               <a href="">Blogs & News</a>
             </div>
          </div> 
         <!--Technology-->
         <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
           <div class="flex items-center space-x-4 ">
-          <p class="text-lg text-[#0B1C98]">Technology</p>
+      <a href="/technology"> <p class="text-lg text-[#0B1C98]">Technology</p> </a>   
           <img src="../public/images/navbar_arrow.svg">
           </div>
           <div class=" flex-col absolute top-6 bg-white text-lg w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content" >
@@ -586,20 +575,14 @@
        <!--Products-->
        <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
         <div class="flex items-center space-x-4  " >
-        <p class="text-lg text-[#0B1C98]">Products</p>
-        <img src="../public/images/navbar_arrow.svg" >
+     <a href="/products">   <p class="text-lg text-[#0B1C98]">Products</p></a>
         </div>
-        <div class=" flex-col absolute top-6 bg-white text-lg w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content" >
-          <a href="">Why Scloudin</a>
-          <a href="">Partnership</a>
-          <a href="">Process</a>
-          <a href="">Business Model</a>
-         </div>
+       
      </div>
      <!--services-->
      <div class="cursor-pointer testfont_ flex flex-col relative dropdown">
       <div class="flex items-center space-x-4">
-      <p class="text-lg text-[#0B1C98] testfont_">Services</p>
+     <a href="/services"><p class="text-lg text-[#0B1C98] testfont_">Services</p></a> 
       <img src="../public/images/navbar_arrow.svg">
       </div>
       <div class=" flex-col absolute top-6 bg-white text-lg w-44 p-2 px-4 space-y-2 rounded-xl shadow-xl border-1 border-gray-100 hidden z-50 testfont_ dropdown-content">
@@ -609,7 +592,8 @@
         <a href="">Business Model</a>
        </div>
    </div>
-        <a class="testfont_ text-[#0B1C98] text-lg cursor-pointer" href="/online_course">Careers</a>
+        <a class="testfont_ text-[#0B1C98] text-lg cursor-pointer" href="/hireus">Hire Us</a>
+        <a class="testfont_ text-[#0B1C98] text-lg cursor-pointer" href="/careers">Careers</a>
         
        
        </div>
