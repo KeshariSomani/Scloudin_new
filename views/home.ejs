@@ -1,5 +1,10 @@
 <%-include('partials/header')%>
 
+<style>
+  .nunito{
+    font-family: 'Nunito';
+  }
+</style>
 <!--Section 1-->   
  <section>
   <div class="slideshow-container">
@@ -22,8 +27,8 @@
   </section> 
 
 <!--Section 2 about us-->
- <div> 
-    <p data-aos="flip-right" class="mt-8 text-[#0B1C98] text-4xl md:text-7xl lg:text-7xl text-center about ">About Us</p>
+ <div id="home_company"> 
+  <p class="mt-8 text-[#0B1C98] font-extrabold text-4xl md:text-7xl lg:text-7xl text-center nunito">About Us</p>
     <p class="mx-8 lg:mx-16 mt-4 text-[#889099] text-lg md:text-xl lg:text-xl testfont_"> <b class="text-[#0B1C98]">Scloudin </b>is a network of connected , young passionate software engineers . Our firm is based in Banglore , India. </p>
  </div>
 <!--Section 3 WHO WE ARE-->
@@ -34,7 +39,7 @@
   <img src="../public/images/home_About_Circle.svg" alt="" class="float-right -mt-16">
 </div>
 <div class=" p-2 px-8 lg:px-0 lg:w-1/2 lg:ml-12  lg:mt-24">
-    <p class="text-[#9747FF] text-lg font-semibold">About</p>
+    <p class="text-[#9747FF] text-lg font-semibold" >About</p>
     <p class="text-[#0B1C98] text-3xl font-bold nutino">Who We Are? </p>
 
     <p class="text-[#37454D] text-xl pt-2"> We are a small young start up who builds everything around “ People & Technology ’’ We are agile software engineers , passionate for work life balance . We are skilled team of professionals in the field of software development . We use our passion for development to deliver the best software applications with the combination of technology know how ? and with great communication , we can create complete solutions for our clients. </p>
@@ -69,7 +74,7 @@
          <p class="text-lg pt-4"> With 6 + years of experience we have certified professional team of experts and exhaustive market research analysis
          </p>
          <div class="mt-8">
-         <a href="contact.ejs"> 
+         <a href="/contact"> 
           <button class="border-black border-2  py-2 px-4 rounded-lg hover:bg-[#0B1C98] hover:text-white hover:border-white nutino">Contact Us</button>
          </a>
         </div>
@@ -77,7 +82,7 @@
       </div>
     </div>
 <!--Section 5-->  
-<div class="mx-8 lg:mx-16 mt-12">
+<div class="mx-8 lg:mx-16 mt-12" id="what_we_do">
   <p class="text-[#9747FF] text-lg font-semibold">About</p>
   <p class="text-[#0B1C98] text-[45px] font-semibold nutino">What We Do? </p>
 
@@ -85,8 +90,8 @@
 </div>
 
 <!--Section 6-->  
-<div> 
-<p data-aos="zoom-in" class="mt-8 text-[#0B1C98] text-4xl md:text-7xl lg:text-7xl text-center about ">Our Values</p>
+<div id="our_values"> 
+<p data-aos="zoom-in" class="mt-8 text-[#0B1C98] text-4xl md:text-7xl lg:text-7xl text-center font-extrabold nunito ">Our Values</p>
 <p class="mx-8 lg:mx-16 mt-4 text-[#37454D] text-lg md:text-xl lg:text-xl">We love what we do , and we are proud to work on challenging projects , providing  the  best of our resources and processes for every client , from start - ups to global organizations. </p>
 </div>
 
@@ -134,14 +139,14 @@
 </section>  
 <!--Section 8-->
     
-<div class="mt-8 lg:flex flex-row-reverse justify-between  md:pl-5 h-full w-full main">
+<div class="mt-8 lg:flex flex-row-reverse justify-between  md:pl-5 h-full w-full main" id="our_focus">
 <div data-aos="fade-up-right">
     <img src="../public/images/Home_Sec8_ourFocus.svg" alt="About us image"
   class="h-full w-[90%] mx-auto md:mx-0 md:h-96 md:w-full  lg:h-[35rem] lg:w-[40rem] lg:w-1/2"/>
 </div>
 <div class=" p-2 px-8 lg:px-0 lg:w-1/2 lg:ml-12  lg:mt-24">
    
-    <p class="text-[#0B1C98] text-6xl about">Our Focus </p>
+    <p class="text-[#0B1C98] text-6xl font-extrabold nunito ">Our Focus </p>
 
     <p class="text-[#37454D] text-xl text-justify mt-8"> Excellence in IT SOLUTIONS , Economic Prosperity for All , Full Potential of Technology , Attain Business Success </p>
     
@@ -217,7 +222,7 @@
 <!--Section 10 -->  
 <div class="mx-8 lg:mx-16 mt-12">
   <p class="text-[#9747FF] text-lg font-semibold">What do we do</p>
-  <p class="text-[#0B1C98] text-5xl about mt-2">Our Technology </p>
+  <p class="text-[#0B1C98] text-5xl about mt-2 font-extrabold nunito ">Our Technology </p>
 
   <p class="text-[#37454D] text-xl mt-4"> We understand that each project  and each client is unique with their own specific requirements . Based on our knowledge nd experience , we select the most suitable technology for the software solution you are looking for. </p>
 </div>
@@ -233,7 +238,7 @@ class="h-full w-[90%]  md:mx-0 md:h-96 md:w-full  lg:h-[30rem] lg:w-[30rem] pr-1
 </div>
 <div data-aos="fade-down"
 data-aos-easing="linear"
-data-aos-duration="1500" class="mx-auto py-12 px-8 lg:px-8 lg:ml-24 h-56 w-full lg:w-[40%] rounded-lg shadow-lg bg-white my-8 lg:mt-36 hover:shadow-2xl hover:delay-150 hover:border-[#0B1C98] hover:border-2 hover:border-b-4 hover:ease-in duration-300  cursor-pointer">
+data-aos-duration="1500" class="mx-4 lg:mx-auto py-12 px-8 lg:px-8 lg:ml-24 h-56 w-full lg:w-[40%] rounded-lg shadow-lg bg-white my-8 lg:mt-36 hover:shadow-2xl hover:delay-150 hover:border-[#0B1C98] hover:border-2 hover:border-b-4 hover:ease-in duration-300  cursor-pointer">
    <div class="flex mx-2 ">
        <div class="h-12 w-12 rounded-lg bg-[#9CEDA4] flex items-center ">
         <img src="../public/images/Home_Sec11_Card1.svg" alt="" class="mx-auto">
@@ -255,15 +260,15 @@ data-aos-duration="1500" class="mx-auto py-12 px-8 lg:px-8 lg:ml-24 h-56 w-full 
         </div>
           <div data-aos="fade-up"
           data-aos-easing="linear"
-          data-aos-duration="1500" class="mx-auto pt-4 px-8 lg:px-8 l:ml-24 h-56 w-full lg:w-[40%] rounded-lg shadow-lg bg-white mt-12 lg:mt-36 hover:shadow-2xl hover:delay-150 hover:border-[#0B1C98] hover:border-2 hover:border-b-4 hover:ease-in duration-300  cursor-pointer">
-               <div class="flex mx-2">
-                   <div class="h-12 w-12 rounded-lg bg-[#EDA69C] flex items-center ">
+          data-aos-duration="1500" class="mx-4 lg:mx-auto pt-4 px-8 lg:px-8 l:ml-24 h-56 w-full lg:w-[40%] rounded-lg shadow-lg bg-white mt-12 lg:mt-36 hover:shadow-2xl hover:delay-150 hover:border-[#0B1C98] hover:border-2 hover:border-b-4 hover:ease-in duration-300  cursor-pointer">
+               <div class="flex mx-2 mt-4">
+                   <div class="h-12 w-12 rounded-lg bg-[#EDA69C] flex items-center">
                     <img src="../public/images/Home_Sec11_Card2.svg" alt="" class="mx-auto">
                   </div>
                   <p class="text-[#9747FF] text-xl font-bold mx-4">Mobile App <br> Development</p>
                 </div>  
                   
-                  <div class="text-[#210746] mx-4 mt-4">Flutter, Dart, Android native application, Phone, Tablet, TV, iPhone, iPad, Hybrid App, IOS native application, Hybrid native application</div>
+                  <div class="text-[#210746] mx-4 mt-4 mt-8">Flutter, Dart, Android native application, Phone, Tablet, TV, iPhone, iPad, Hybrid App, IOS native application, Hybrid native application.</div>
           </div>
           
         </div>   
@@ -277,7 +282,7 @@ data-aos-duration="1500" class="mx-auto py-12 px-8 lg:px-8 lg:ml-24 h-56 w-full 
           </div>
           <div data-aos="fade-up"
           data-aos-easing="linear"
-          data-aos-duration="1500" class="mx-auto py-12 px-8 lg:px-8 lg:ml-24 h-56 w-full lg:w-[40%] rounded-lg shadow-lg bg-white my-8 lg:mt-36 hover:shadow-2xl hover:delay-150 hover:border-[#0B1C98] hover:border-2 hover:border-b-4 hover:ease-in duration-300  cursor-pointer">
+          data-aos-duration="1500" class="mx-4 lg:mx-auto py-12 px-8 lg:px-8 lg:ml-24 h-56 w-full lg:w-[40%] rounded-lg shadow-lg bg-white my-8 lg:mt-36 hover:shadow-2xl hover:delay-150 hover:border-[#0B1C98] hover:border-2 hover:border-b-4 hover:ease-in duration-300  cursor-pointer">
                <div class="flex mx-2">
                    <div class="h-12 w-12 rounded-lg bg-[#9CEDA4] flex items-center ">
                     <img src="../public/images/Home_Sec11_Card3.svg" alt="" class="mx-auto">
@@ -334,29 +339,30 @@ data-aos-duration="1500" class="mx-auto py-12 px-8 lg:px-8 lg:ml-24 h-56 w-full 
 <!--Section 13-->  
 <div class="mx-12 lg:mx-16 mt-[6rem] lg:mt-[24rem]">
   <p class="text-[#242331] text-2xl font-semibold">Services</p>
-  <p class="text-[#0B1C98] text-3xl lg:text-5xl about mt-2">Solution areas </p>
+  <p class="text-[#0B1C98] text-3xl lg:text-5xl about mt-2 font-bold nunito ">Solution areas </p>
   
   <p class="text-[#37454D] text-lg lg:text-xl mt-4"> We understand that each client is unique with their own specific requirements. Based on our knowledge and experience, we select the most suitable technology for the software solution you are looking for.</p>
-  <button class="text-2xl bg-[#4A60A1] text-white rounded-full px-8 py-2 mt-4 flex hover:px-12 hover:bg-[#0B1C98]">All Services <img src="../public/images/Home_Sec13_Btn_Arrow.svg" alt="arrow" class="pt-2 mx-2"></button>
+ <a href="/services"><button class="text-2xl bg-[#4A60A1] text-white rounded-full px-8 py-2 mt-4 flex hover:px-12 hover:bg-[#0B1C98]">All Services <img src="../public/images/Home_Sec13_Btn_Arrow.svg" alt="arrow" class="pt-2 mx-2"></button></a> 
   
   
   <div id="serviceSolutionAreas_cards" class=" grid grid-cols-4 my-[2rem] ">
-    <div class=""> <img src="../public/images/home_allServicesCard_1.svg" class="" alt="" /> </div>
-    <div class=""> <img src="../public/images/home_allServicesCard_2.svg" class="" alt="" /> </div>
-    <div class=""> <img src="../public/images/home_allServicesCard_3.svg" class="" alt="" /> </div>
-    <div class=""> <img src="../public/images/home_allServicesCard_4.svg" class="" alt="" /> </div>
-    <div class=""> <img src="../public/images/home_allServicesCard_5.svg" class="" alt="" /> </div>
-    <div class=""> <img src="../public/images/home_allServicesCard_6.svg" class="" alt="" /> </div>
-    <div class=""> <img src="../public/images/home_allServicesCard_7.svg" class="" alt="" /> </div>
-    <div class=""> <img src="../public/images/home_allServicesCard_8.svg" class="" alt="" /> </div>
-    <div class=""> <img src="../public/images/home_allServicesCard_9.svg" class="" alt="" /> </div>
-    <div class=""> <img src="../public/images/home_allServicesCard_10.svg" class="" alt="" /> </div>
-    <div class=""> <img src="../public/images/home_allServicesCard_11.svg" class="" alt="" /> </div>
-    <div class=""> <img src="../public/images/home_allServicesCard_12.svg" class="" alt="" /> </div>
-    <div class=""> <img src="../public/images/home_allServicesCard_13.svg" class="" alt="" /> </div>
-    <div class=""> <img src="../public/images/home_allServicesCard_14.svg" class="" alt="" /> </div>
-    <div class=""> <img src="../public/images/home_allServicesCard_15.svg" class="" alt="" /> </div>
-    <div class=""> <img src="../public/images/home_allServicesCard_16.svg" class="" alt="" /> </div>
+  <div class=""><a href="/services"><img src="../public/images/home_allServicesCard_1.svg" class="" alt="" /></a></div>
+  <div class=""><a href="/services"><img src="../public/images/home_allServicesCard_2.svg" class="" alt="" /></a></div>
+  <div class=""><a href="/services"><img src="../public/images/home_allServicesCard_3.svg" class="" alt="" /></a></div>
+  <div class=""><a href="/services"><img src="../public/images/home_allServicesCard_4.svg" class="" alt="" /></a></div>
+  <div class=""><a href="/services"><img src="../public/images/home_allServicesCard_5.svg" class="" alt="" /></a></div>
+  <div class=""><a href="/services"><img src="../public/images/home_allServicesCard_6.svg" class="" alt="" /></a></div>
+  <div class=""><a href="/services"><img src="../public/images/home_allServicesCard_7.svg" class="" alt="" /></a></div>
+  <div class=""><a href="/services"><img src="../public/images/home_allServicesCard_8.svg" class="" alt="" /></a></div>
+  <div class=""><a href="/services"><img src="../public/images/home_allServicesCard_9.svg" class="" alt="" /></a></div>
+  <div class=""><a href="/services"><img src="../public/images/home_allServicesCard_10.svg" class="" alt="" /></a></div>
+  <div class=""><a href="/services"><img src="../public/images/home_allServicesCard_11.svg" class="" alt="" /></a></div>
+  <div class=""><a href="/services"><img src="../public/images/home_allServicesCard_12.svg" class="" alt="" /></a></div>
+  <div class=""><a href="/services"><img src="../public/images/home_allServicesCard_13.svg" class="" alt="" /></a></div>
+  <div class=""><a href="/services"><img src="../public/images/home_allServicesCard_14.svg" class="" alt="" /></a></div>
+  <div class=""><a href="/services"><img src="../public/images/home_allServicesCard_15.svg" class="" alt="" /></a></div>
+  <div class=""><a href="/services"><img src="../public/images/home_allServicesCard_16.svg" class="" alt="" /></a></div>
+
   </div>
   
   
@@ -365,24 +371,23 @@ data-aos-duration="1500" class="mx-auto py-12 px-8 lg:px-8 lg:ml-24 h-56 w-full 
   
        <div id="showCard16Crousel" class="carousel-container">
     <div class="carousel" id="carousel">
-      <div class="carousel-item"> <img src="../public/images/home_allServicesCard_1.svg" class="" alt="" /> </div>
-      <div class="carousel-item"> <img src="../public/images/home_allServicesCard_2.svg" class="" alt="" /> </div>
-      <div class="carousel-item"> <img src="../public/images/home_allServicesCard_3.svg" class="" alt="" /></div>
-      <div class="carousel-item"> <img src="../public/images/home_allServicesCard_4.svg" class="" alt="" /> </div>
-      <div class="carousel-item"> <img src="../public/images/home_allServicesCard_5.svg" class="" alt="" /> </div>
-      <div class="carousel-item"> <img src="../public/images/home_allServicesCard_6.svg" class="" alt="" /> </div>
-      <div class="carousel-item"> <img src="../public/images/home_allServicesCard_7.svg" class="" alt="" /> </div>
-      <div class="carousel-item"> <img src="../public/images/home_allServicesCard_8.svg" class="" alt="" /> </div>
-      <div class="carousel-item"> <img src="../public/images/home_allServicesCard_9.svg" class="" alt="" /> </div>
-      <div class="carousel-item"> <img src="../public/images/home_allServicesCard_10.svg" class="" alt="" /> </div>
-      <div class="carousel-item"> <img src="../public/images/home_allServicesCard_11.svg" class="" alt="" /> </div>
-      <div class="carousel-item"> <img src="../public/images/home_allServicesCard_12.svg" class="" alt="" /> </div>
-      <div class="carousel-item"> <img src="../public/images/home_allServicesCard_13.svg" class="" alt="" /> </div>
-      <div class="carousel-item"> <img src="../public/images/home_allServicesCard_14.svg" class="" alt="" /> </div>
-      <div class="carousel-item"> <img src="../public/images/home_allServicesCard_15.svg" class="" alt="" /> </div>
-      <div class="carousel-item"> <img src="../public/images/home_allServicesCard_16.svg" class="" alt="" /> </div>
-  
-  
+      <div class="carousel-item"><a href="/services"><img src="../public/images/home_allServicesCard_1.svg" class="" alt="" /></a></div>
+      <div class="carousel-item"><a href="/services"><img src="../public/images/home_allServicesCard_2.svg" class="" alt="" /></a></div>
+      <div class="carousel-item"><a href="/services"><img src="../public/images/home_allServicesCard_3.svg" class="" alt="" /></a></div>
+      <div class="carousel-item"><a href="/services"><img src="../public/images/home_allServicesCard_4.svg" class="" alt="" /></a></div>
+      <div class="carousel-item"><a href="/services"><img src="../public/images/home_allServicesCard_5.svg" class="" alt="" /></a></div>
+      <div class="carousel-item"><a href="/services"><img src="../public/images/home_allServicesCard_6.svg" class="" alt="" /></a></div>
+      <div class="carousel-item"><a href="/services"><img src="../public/images/home_allServicesCard_7.svg" class="" alt="" /></a></div>
+      <div class="carousel-item"><a href="/services"><img src="../public/images/home_allServicesCard_8.svg" class="" alt="" /></a></div>
+      <div class="carousel-item"><a href="/services"><img src="../public/images/home_allServicesCard_9.svg" class="" alt="" /></a></div>
+      <div class="carousel-item"><a href="/services"><img src="../public/images/home_allServicesCard_10.svg" class="" alt="" /></a></div>
+      <div class="carousel-item"><a href="/services"><img src="../public/images/home_allServicesCard_11.svg" class="" alt="" /></a></div>
+      <div class="carousel-item"><a href="/services"><img src="../public/images/home_allServicesCard_12.svg" class="" alt="" /></a></div>
+      <div class="carousel-item"><a href="/services"><img src="../public/images/home_allServicesCard_13.svg" class="" alt="" /></a></div>
+      <div class="carousel-item"><a href="/services"><img src="../public/images/home_allServicesCard_14.svg" class="" alt="" /></a></div>
+      <div class="carousel-item"><a href="/services"><img src="../public/images/home_allServicesCard_15.svg" class="" alt="" /></a></div>
+      <div class="carousel-item"><a href="/services"><img src="../public/images/home_allServicesCard_16.svg" class="" alt="" /></a></div>
+    
   
       <!-- Add more carousel items here -->
     </div>
@@ -406,8 +411,8 @@ data-aos-duration="1500" class="mx-auto py-12 px-8 lg:px-8 lg:ml-24 h-56 w-full 
     <!-- our sevices Section -->
   
     <div class="flex flex-col justify-center items-center my-[5rem] gap-10 ">
-      <h1 class="text-7xl font-extrabold about text-[#0B1C98] "> Our Services </h1>
-      <p class="text-[#797979] text-2xl"> SAAS Based Services and Application Design </p>
+      <h1 class="lg:text-7xl text-4xl md:text-7xl font-extrabold about text-[#0B1C98] text-center nunito "> Our Services </h1>
+      <p class="text-[#797979] lg:text-2xl text-lg mx-2"> SAAS Based Services and Application Design </p>
       
       <!-- servicesViewForDesktop -->
       <div id="serviceSolutionAreas_cards" class="grid grid-cols-3 gap-8 ">
@@ -425,7 +430,7 @@ data-aos-duration="1500" class="mx-auto py-12 px-8 lg:px-8 lg:ml-24 h-56 w-full 
   
       <!-- servicesForMobileView -->
   
-      <div id="showCard16Crousel" class="carousel-container">
+      <div id="showCard16Crousel" class="carousel-container mx-8">
         <div class="associationSectionCarousel" id="associationSectionCarousel">
           <div class="carousel-item"> <img src="../public/images/ourServices_image1.svg" class="" alt="" /> </div>
           <div class="carousel-item"> <img src="../public/images/ourServices_image2.svg" class="" alt="" /> </div>
@@ -468,7 +473,7 @@ data-aos-duration="1500" class="mx-auto py-12 px-8 lg:px-8 lg:ml-24 h-56 w-full 
 <!--Section 17-->
 <div class="mx-12 lg:mx-16 mt-12">
   <p class="text-[#242331] text-2xl font-semibold">Our Association</p>
-  <p class="text-[#0B1C98] text-3xl lg:text-5xl about mt-2">Partners </p>
+  <p class="text-[#0B1C98] text-3xl lg:text-5xl font-bold nunito  mt-2">Partners </p>
   
   <p class="text-[#37454D] text-lg lg:text-xl mt-4"> SCLOUDIN is a customer centric company focused on solving customer day to day problems and providing sustainable business solutions for their growth and suggest technology advantages. SCLOUDIN strongly believe that a strategic partnership is crucial to growth and success. We share similar values, common objectives, and shared goals with all our partners. SCLOUDIN partner ecosystem is driven by collaboration, knowledge sharing, and mutual growth opportunities with a common goal to ensure optimized customer satisfaction and business growth.</p>
   
@@ -476,33 +481,57 @@ data-aos-duration="1500" class="mx-auto py-12 px-8 lg:px-8 lg:ml-24 h-56 w-full 
   
 
 <!--Section  18-->
-
-  <section class="mx-8 ">
-    <div class="flex mt-8 ">
-      <div class=" hover:shadow-2xl hover:shadow-blue-700 hover:my-2 mx-4 px-4 bg-transparent rounded-full">
+<!--desktop-->
+  <section class="mx-8 lg:block md:block hidden">
+    <div class="flex  mt-8 mb-12">
+      <div class=" hover:shadow-2xl hover:shadow-blue-700 mx-4 px-4 bg-transparent rounded-full">
          <img src="../public/images/home_sec18_google_logo.svg" alt="" class="cursor-pointer">
       </div>
-      <div class="hover:shadow-2xl hover:shadow-blue-700 hover:my-2 mx-8 px-2 rounded-full">
+      <div class="hover:shadow-2xl hover:shadow-blue-700 mx-8 px-2 rounded-full">
         <img src="../public/images/home_sec18_MS_logo.svg" alt="" class="cursor-pointer">
      </div>
-     <div class="hover:shadow-2xl hover:shadow-blue-700 hover:my-2 mx-8 px-2 rounded-full">
+     <div class="hover:shadow-2xl hover:shadow-blue-700 mx-8 px-2 rounded-full">
       <img src="../public/images/home_sec18_IBM_logo.svg" alt="" class="cursor-pointer">
    </div>
-   <div class="hover:shadow-2xl hover:shadow-blue-700 hover:my-2 mx-8 px-2 rounded-full">
+   <div class="hover:shadow-2xl hover:shadow-blue-700 mx-8 px-2 rounded-full">
     <img src="../public/images/home_sec18_AWS_logo.svg" alt="" class="cursor-pointer">
    </div> 
-  <div class="hover:shadow-2xl hover:shadow-blue-700 hover:my-2 mx-8 px-2 rounded-full">
+  <div class="hover:shadow-2xl hover:shadow-blue-700 mx-8 px-2 rounded-full">
     <img src="../public/images/home_sec18_jio_logo.svg" alt="" class="cursor-pointer">
   </div>
-  <div class="hover:shadow-2xl hover:shadow-blue-700 hover:my-2 mx-8 px-2 rounded-full">
+  <div class="hover:shadow-2xl hover:shadow-blue-700 mx-8 px-2 rounded-full">
     <img src="../public/images/home_sec18_HP_logo.svg" alt="" class="cursor-pointer">
+  </div>
+    </div>
+  </section>
+
+  <!--mobile-->
+  <section class="mx-8 lg:hidden md:hidden block" >
+    <div class="md:flex flex-row mt-8 "  style="display: flex;">
+      <div class=" hover:shadow-2xl hover:shadow-blue-700  mx-4 bg-transparent rounded-full">
+         <img src="../public/images/home_sec18_google_logo.svg" alt="" class="h-8 cursor-pointer">
+      </div>
+      <div class="hover:shadow-2xl hover:shadow-blue-700  mx-2 rounded-full">
+        <img src="../public/images/home_sec18_MS_logo.svg" alt="" class="h-8 cursor-pointer">
+     </div>
+     <div class="hover:shadow-2xl hover:shadow-blue-700  mx-2 rounded-full">
+      <img src="../public/images/home_sec18_IBM_logo.svg" alt="" class="h-8 cursor-pointer">
+   </div>
+   <div class="hover:shadow-2xl hover:shadow-blue-700  mx-2 rounded-full">
+    <img src="../public/images/home_sec18_AWS_logo.svg" alt="" class="h-8 cursor-pointer">
+   </div> 
+  <div class="hover:shadow-2xl hover:shadow-blue-700  mx-2 rounded-full">
+    <img src="../public/images/home_sec18_jio_logo.svg" alt="" class="h-8 cursor-pointer">
+  </div>
+  <div class="hover:shadow-2xl hover:shadow-blue-700  mx-2 px-2 rounded-full">
+    <img src="../public/images/home_sec18_HP_logo.svg" alt="" class="h-8 cursor-pointer">
   </div>
     </div>
   </section>
 
 <!--Section 19-->
 <div class="mx-12 lg:mx-16 mt-12">
-<p class="text-[#0B1C98] text-3xl lg:text-5xl about mt-2">Clients </p>
+<p class="text-[#0B1C98] text-3xl lg:text-5xl font-bold nunito  mt-2">Clients </p>
 <p class="text-[#797979] text-xl lg:text-xl text-justify mt-4">Few but not all connection and projects we are working in current state and delivered the top notch quality outcomes.</p>
 </div>
 
@@ -510,22 +539,40 @@ data-aos-duration="1500" class="mx-auto py-12 px-8 lg:px-8 lg:ml-24 h-56 w-full 
 
 <section class="mx-8">
   <div class="flex mt-8 ">
-    <div class=" hover:shadow-2xl hover:shadow-blue-700 hover:my-2 mx-4 px-4 bg-transparent rounded-full">
+    <div class=" hover:shadow-2xl hover:shadow-blue-700  mx-4 px-4 rounded-full">
        <img src="../public/images/home_sec19_HPPYY_logo.svg" alt="" class="cursor-pointer">
     </div>
-    <div class="hover:shadow-2xl hover:shadow-blue-700 hover:my-2 mx-8 px-2 rounded-full">
+    <div class="hover:shadow-2xl hover:shadow-blue-700  mx-8 px-2 rounded-full">
       <img src="../public/images/home_sec19_SANVOI_logo.svg" alt="" class="cursor-pointer">
    </div>
-   <div class="hover:shadow-2xl hover:shadow-blue-700 hover:my-2 mx-8 px-2 rounded-full">
+   <div class="hover:shadow-2xl hover:shadow-blue-700  mx-8 px-2 rounded-full">
     <img src="../public/images/home_sec19_orbital_logo.svg" alt="" class="cursor-pointer">
  </div>
- <div class="hover:shadow-2xl hover:shadow-blue-700 hover:my-4 mx-8 px-2 rounded-full">
+ <div class="hover:shadow-2xl hover:shadow-blue-700  mx-8 px-2 rounded-full">
   <img src="../public/images/home_sec19_tie_logo.svg" alt="" class="cursor-pointer">
  </div> 
 
   </div>
 </section>
 
+<!--mobile-->
+<section class="mx-8 lg:hidden md:hidden block">
+  <div class="md:flex flex-row mt-8 "  style="display: flex;">
+    <div class=" hover:shadow-2xl hover:shadow-blue-700 mx-4 px-4 bg-transparent rounded-full">
+       <img src="../public/images/home_sec19_HPPYY_logo.svg" alt="" class="cursor-pointer">
+    </div>
+    <div class="hover:shadow-2xl hover:shadow-blue-700 mx-2 rounded-full">
+      <img src="../public/images/home_sec19_SANVOI_logo.svg" alt="" class="cursor-pointer">
+   </div>
+   <div class="hover:shadow-2xl hover:shadow-blue-700 mx-2 rounded-full">
+    <img src="../public/images/home_sec19_orbital_logo.svg" alt="" class="cursor-pointer">
+ </div>
+ <div class="hover:shadow-2xl hover:shadow-blue-700 mx-2 rounded-full">
+  <img src="../public/images/home_sec19_tie_logo.svg" alt="" class="cursor-pointer">
+ </div> 
+
+  </div>
+</section>
 
 <!--Section 20-->
 <div>
